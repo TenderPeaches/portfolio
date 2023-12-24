@@ -1,0 +1,5 @@
+#1 Change <th> header cell order (index.html)
+#2 Change <th> subheader cell order (index.html)
+  #2a Might have to split <th> subheader, depending on subheader structure
+#3 Change order in tableMgr.categories (tableMgr.js)
+#4 Change tableMgr.buildPlayerRow (tableMgr.js) to reflect changes on players' output row

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Prix des Marches et des Gardes Animales à Domicile | Pattitude</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Nous opérons dans la plupart des quartiers du centre de Montréal. Cette page présente notre grille de prix pour nos services de marche de chiens et de garde animale à domicile.">
+		<meta name="author" content="Pattitude">
+        <link rel="stylesheet" href="css/pricing.css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <script src="js/jquery.js"></script>
+    </head>
+    <!--tr id=""><th></th><td class="price"></td><td class="price"></td><td class="price"></td><td class="price"></td></tr-->
+    <body>
+    	<div id="page_header">
+        		<div id="language_panel"><span id="english"><a href="en/pricing.html">English</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="img/MainLogo.png" alt="Pattitude"></a>
+	            <div id="contact_info"><p id="contact_label">Pour nous joindre: </p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Accueil</a>
+        		<a class="header_link" href="pricing.html">Tarifs</a>
+        		<a class="header_link" href="order.html">Réserver</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">À Propos</a>
+	        </div>
+        </div>
+        <div id="content">
+        	<div id="pricing">
+        		<h2>Tarifs</h2>
+            <div id="zone">
+        		<p>Les zones tarifaires (<a target="_blank" href="https://drive.google.com/open?id=1meSNtKKCNJnt72C-HoBzejpSiDSfFfTg&usp=sharing">carte</a>) ajustent les tarifs pour compenser le temps de déplacement. Vérifiez dans quelle zone vous êtes situés  ci-dessous :</p>
+        		<label id="label_postal">Code Postal (3 premiers caractères) : </label><input id="in_postal_short" type="text" maxlength="3"><div id="submit_zone">Soumettre</div>
+        		<p id="out_zone"></p>
+        		</div>
+            <div id="dog_count">
+              <p>Combien de chiens avez-vous?</p>
+              <input type="radio" name="dog_count" value="1" checked="checked"> 1
+              <input type="radio" name="dog_count" value="2"> 2
+            </div>
+            <h3>Promenades Canines</h3>
+        		<table class="pricing_table" id="walk_table">
+        			<tr id="walk_table_header"><th>Service</th><th>Zone 0</th><th>Zone 1</th><th>Zone 2</th><th>Zone 3</th></tr>
+        			<tr id="row_short"><th>Courte Marche (20-30 minutes)</th><td class="price">20,00$</td><td class="price">24,00$</td><td class="price">28,00$</td><td class="price">32,00$</td></tr>
+        			<tr id="row_long"><th>Longue Marche (50-70 minutes)</th><td class="price">25,00$</td><td class="price">30,00$</td><td class="price">35,00$</td><td class="price">40,00$</td></tr>
+              <tr id="row_90m"><th>Marche de 90 minutes</th><td class="price">32,00$</td><td class="price">38,00$</td><td class="price">44,00$</td><td class="price">50,00$</td></tr>
+            </table>
+            <p>À l'achat de 5 marches ou plus au cours d'un même mois, obtenez 10% de rabais sur l'ensemble de la facture.</p>
+        		<p>Nous fournissons gâteries, sacs à besoin et remplissage d'eau et de nourriture sans frais additionnels.</p>
+
+            <h3>Garde à domicile</h3>
+            <table class="pricing_table" id="petsitting_table">
+              <tr id="sit_table_header"><th>Service</th><th>Zone 0</th><th>Zone 1</th><th>Zone 2</th><th>Zone 3</th></tr>
+              <tr id="row_cat_visit"><th>Visite de chat</th><td class="price">12,00$</td><td class="price">18,00$</td><td class="price">24,00$</td><td class="price">30,00$</td></tr>
+        			<tr id="row_full_walks"><th>Couverture Complète (3 marches/jour)</th><td class="price">50,00$-75,00$</td><td class="price">72,00$-90,00$</td><td class="price">84,00$-105,00$</td><td class="price">96,00$-120,00$</td></tr>
+        			<!--tr id="row_night"><th>Nuitée à Domicile (22h-7h)</th><td class="price">40,00$</td><td class="price">50,00$</td><td class="price">60,00$</td><td class="price">80,00$</td></tr>
+        			<tr id="row_night_package"><th>Nuitée Complète (Nuitée + 2 marches)</th><td class="price">72,00$</td><td class="price">84,00$</td><td class="price">100,00$</td><td class="price">120,00$</td></tr-->
+        		</table>
+            <p>Les tarifs de garde à domicile sont ajustables selon vos besoins, flexibilité et volume de commande.</p>
+
+            <h3>Cani-Cross</h3>
+            <table class="pricing_table" id="canicross_table">
+              <tr id="run_table_header"><th>Service</th><th>Zone 0</th><th>Zone 1</th><th>Zone 2</th><th>Zone 3</th></tr>
+              <tr id="row_run_short"><th>Cani-Cross 15-30m/3-5km</th><td class="price">35,00$</td><td class="price">40,00$</td><td class="price">45,00$</td><td class="price">50,00$</td></tr>
+              <tr id="row_run_long"><th>Cani-Cross 45-60m/6-10km</th><td class="price">55,00$</td><td class="price">60,00$</td><td class="price">65,00$</td><td class="price">70,00$</td></tr>
+              <tr id="row_run_mountain"><th>Cani-Cross Mont-Royal*</th><td class="price">75,00$</td><td class="price">75,00$</td><td class="price">75,00$</td><td class="price">75,00$</td></tr>
+            </table>
+            <p>Le service de Cani-Cross est seulement offert en période estivale, soit lorsque les trottoirs sont dégagés de toute glace et neige</p>
+            <p>*Le tarif du Cani-Cross Mont-Royal assume une distance de moins de 5km de votre domicile au Mont-Royal; le tarif peut être majoré si ce n'est pas le cas.</p>
+            <p>La distance et vitesse peuvent être ajustées selon les besoins de votre chien!</p>
+
+            <!--h3>Entraînement/Consultations en comportement canin</h3>
+            <table class="pricing_table" id="behavior_table">
+              <tr id="behavior_table_header"><th>Service</th><th>Zone 0</th><th>Zone 1</th><th>Zone 2</th><th>Zone 3</th></tr>
+              <tr id="row_1hr_behavior"><th>Séance de 60 minutes</th><td class="price">40,00$</td><td class="price">50,00$</td><td class="price">60,00$</td><td class="price">70,00$</td></tr>
+              <tr id="row_2hr_behavior"><th>Séance de 120 minutes</th><td class="price">60,00$</td><td class="price">80,00$</td><td class="price">100,00$</td><td class="price">120,00$</td></tr>
+              <tr id="row_remote_behavior"><th>Consultation à distance</th><td class="price">20,00$/30m</td><td class="price">20,00$/30m</td><td class="price">20,00$/30m</td><td class="price">20,00$/30m</td></tr>
+            </table-->
+
+        	</div>
+        	<div id="zone_breakdown">
+        		<p><a target="_blank" href="https://drive.google.com/open?id=1meSNtKKCNJnt72C-HoBzejpSiDSfFfTg&usp=sharing">Carte Google</a> des zones tarifaires: </p>
+        		<table id="zone_table">
+        			<tbody>
+	        			<tr><th colspan="2">Zone 0 (Tarif de base) :</th></tr>
+	        			<tr><td class="borough">Rosemont / La Petite-Patrie</td><td class="postal_codes">H2S, H2G, H1X, H1Y</td></tr>
+	        			<tr><td class="borough">Le Plateau Mont-Royal / Mile-End</td><td class="postal_codes">H2J, H2H, H2T</td></tr>
+	        			<tr><td class="borough">Sainte-Marie</td><td class="postal_codes">H2K</td></tr>
+	        			<tr><td class="borough">Villeray (Ouest de Pie-IX)</td><td class="postal_codes">H2E, H2A, H2R</td></tr>
+	        			<tr><th colspan="2">Zone 1 :</th></tr>	<tr><td class="borough">Outremont</td><td class="postal_codes">H2V</td></tr>
+  	        			<tr><td class="borough">Nouveau-Rosemont (Sud de Bélanger)</td><td class="postal_codes">H1T</td></tr><tr><td class="borough">Hochelaga (Ouest de Pie-IX)</td><td class="postal_codes">H1W</td></tr>
+                <tr><td class="borough">Milton Park / Ville-Marie</td><td class="postal_codes">H2X, H2W, H2L H3A</td></tr>
+	        			<tr><td class="borough">Parc-Ex</td><td class="postal_codes">H2P, H3N</td></tr>
+	    				<tr><th colspan="2">Zone 2 :</th></tr>
+              <tr><td class="borough">Centre-Ville</td><td class="postal_codes">H3H, H3G, H5A, H2Z</td></tr>
+	    				<tr><td class="borough">Vieux-Montréal</td><td class="postal_codes">H2Y</td></tr><tr><td class="borough">Hochelaga (Est de Pie-IX)</td><td class="postal_codes">H1V</td></tr>
+	    				<tr><td class="borough">Ahuntsic (Sud de Louvain), Sault-au-Récollet</td><td class="postal_codes">H2M, H2N, H2B, H1Z</td></tr>
+	    				<tr><td class="borough">Côte-des-Neiges</td><td class="postal_codes">H3S, H3T, H3V</td></tr>
+	    				<tr><td class="borough">Ville Mont-Royal (Est de Canora)</td><td class="postal_codes">H3P</td></tr>
+	    				<tr><td class="borough">Saint-Léonard (Ouest de Lacordaire)</td><td class="postal_codes">H1R, H1S</td></tr>
+    					<tr><th colspan="2">Zone 3 :</th><tr><td class="borough">Westmount / NDG</td><td class="postal_codes">H3Y, H3Z, H4A, H3W</td></tr>
+	    				<tr><td class="borough">Ville Mont-Royal (Est de Canora)</td><td class="postal_codes">H3R</td></tr>
+	    				<tr><td class="borough">Ahunstic-Cartierville</td><td class="postal_codes">H2C, H3L, H4N, H1H</td></tr>
+	    				<tr><td class="borough">Saint-Léonard (Est de Lacordaire)</td><td class="postal_codes">H1P</td></tr>
+	    				<tr><td class="borough">Longue-Pointe</td><td class="postal_codes">H1N, H1M</td></tr>
+	    				<tr><td class="borough">Griffintown / Petite-Bourgogne / Cité-du-Havre</td><td class="postal_codes">H3C, H3J</td></tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+
+
+        </div>
+
+        <script src="js/pricing.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+$primary_color: #6BB369;
+$secondary_color: #FAFAFA;
+$tertiary_color: #E83;
+
+// Black & white
+/*$primary_color: #000;
+$secondary_color: #FAFAFA;
+$tertiary_color: #666;*/
+$background_color: scale-color($primary_color, $lightness: 75%);
+$disabled_color: #888;
+
+$quebec_color: #5b92ea;
+$canada_color: #000000;
+
+$wrong_color: #A30101;

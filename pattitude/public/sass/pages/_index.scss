@@ -1,0 +1,216 @@
+body {
+    
+    background: url('../img/maggie.jpg') no-repeat center fixed;
+    background-size: 100%;   
+}
+
+#filter {
+    
+    width: 100%;
+    height: 100%;
+    @media only screen and (min-width: $desktop_min_width) {
+        padding: 0 0 640px;
+    }     
+    
+    background: scale-color($background_color, $alpha: -50%);   
+}
+
+#content {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        padding: 0 0 50px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    
+    background: scale-color($background_color, $lightness: 25%, $alpha: -20%);   
+}
+
+%promo_div {
+    position: relative;   
+    display: inline-block;
+    // Desktop
+    @media only screen and (min-width: $desktop_min_width) {
+    }
+    
+    // Mobile
+    @media only screen and (max-width: $mobile_max_width) {
+        width: 100%;   
+    }
+    
+    font-size: 14pt;
+    
+    border: {
+        width: 0px;
+        style: ridge;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+    
+    background: scale-color($background_color, $lightness: 90%, $alpha: -25%);
+    box-shadow: 0px 0px 5px 10px scale-color($background-color, $lightness: 90%, $alpha: -25%);
+}
+
+#content div ul {
+    padding: 0 0 20px;   
+}
+
+#content div li {
+    margin: 8px;   
+}
+
+#head_promo {
+    @extend %promo_div;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 90%;
+        padding: 10px 30px;
+        margin: 40px auto 40px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+}
+
+#walk_promo {
+    @extend %promo_div;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        left: -5%;
+        width: 38%;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+    {
+    }
+}
+#petsit_promo {
+    @extend %promo_div;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        right: -5%;
+        width: 38%;
+        margin: 40px 0;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    
+}
+
+
+#footer_promo {
+    @extend %promo_div;
+    text-align: left;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 90%;
+        padding: 30px;
+        margin: 40px 0;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        padding: 5px;
+    }
+}
+
+#testimonials {
+}
+
+#testimonials h3 {
+    display: inline-block;
+    
+    font-size: 24pt;
+    padding: 5px 10px;
+
+    background: scale-color($background_color, $lightness: 75%);
+    box-shadow: 0px 0px 15px 15px scale-color($background-color, $lightness: 75%);
+    
+    border-radius: 50%;
+    border-color: scale-color($background_color, $lightness: 75%);
+}   
+
+.testimonial {
+    position: relative;
+    
+    background: scale-color($background_color, $lightness: 90%, $alpha: -25%);
+    padding: 5px;
+    
+    @media only screen and (min-width: $desktop_min_width) {
+            margin: 40px 125px;
+    height: 260px;
+
+    }
+
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+         margin: 40px 0px;
+    }
+
+    border: {
+        width: 0px;
+        style: solid;
+        color: scale-color($background-color, $lightness: 90%, $alpha: -25%);
+        radius: 16px 4px;
+        }   
+            
+        box-shadow: 0px 0px 5px 10px scale-color($background-color, $lightness: 90%, $alpha: -25%);
+        
+    text-align: left;
+}
+
+.testimonial p {
+    position: relative;
+    
+    
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+    display: inline-block;
+        width: 55%;     
+        left: 45%;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+         display: block;
+         text-align: justify;
+    }
+}
+
+.testimonial img {
+    position: absolute;
+    display: inline-block;
+    
+    border-radius: 16px 4px;
+    
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        
+        height: 95%;
+        max-width: 40%;
+        
+        right: 10px;
+        &:nth-child(2n) {
+            left: 10px;
+        }
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+         height: 240px;
+    }
+       
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Online Booking for Dog Walks and Home Petsitting | Pattitude</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Quickly book your dog walks or petsitting needs online, through our tailor-made booking tool.">
+		<meta name="author" content="Pattitude">
+        <link rel="stylesheet" href="../css/order.css"/>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+    </head>
+    <body>
+		<script src="../js/walk.js"></script>
+		<script src="../js/petsit.js"></script>
+		
+    	<div id="page_header">
+        		<div id="language_panel"><span id="french"><a href="../order.html">Français</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="../img/MainLogo.png" alt="Pattitude"></a>
+	            <div id="contact_info"><p id="contact_label">Contact us: &emsp;&emsp;&emsp;</p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Home</a>
+        		<a class="header_link" href="pricing.html">Prices</a>
+        		<a class="header_link" href="order.html">Order</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">About</a>
+	        </div>
+        </div>
+        
+        <div id="content">
+        	<div id="first_time_choice">
+        		<p>Have you done business with Pattitude before?</p>
+	        	<input type="radio" name="first_time" value="no" checked="checked">&nbsp; No
+	        	<input type="radio" name="first_time" value="yes">&nbsp; Yes
+        	</div>
+        	<form id="first_time_form">
+        		<p>Drop us a message detailing your needs and we will contact you as soon as possible to schedule a free meet-and-greet.</p>
+        		<textarea id="first_time_text"></textarea>
+        		<p id="first_time_feedback">&nbsp;</p>
+        		<div id="first_time_submit">Submit</div>
+        	</form>
+        	<form id="order_form">
+        	<p>Please fill in the form below for an estimate or to book our services:</p>
+        	<div id="customer_info">
+        	<label id="label_name">Name :</label>
+        	<input id="in_client_name" type="text"><br/>
+        	<label id="label_contact">How you wish to be reached :</label>
+        	<input id="in_client_contact" type="text"><br/>
+        	</div>
+	        	<label id="label_zip">Postal Code (first 3 characters)* : <input id="in_zip" type="text" pattern="^[hHjJ][0-9][a-zA-Z]$"/></label>
+	        	<div id="item_type" class="tab_container">
+	        		<div id="walk_tab" class="tab">Dog Walking</div><div id="housestay_tab" class="tab">Pet Sitting</div>
+	        	</div>
+	        	<div id="walk_form">
+	        		
+	        		<div id="walk_type" class="tab_container">
+	        			<div id="single_tab" class="tab">Single Walk</div><div id="recurring_tab" class="tab">Recurring Walks</div>
+	        		</div>
+	        		<div id="single_form">
+	        			<p>Book a walk on the following date:</p>
+	        			<label id="label_date_single"><input id="in_date_single" type="text"/></label></div>
+	        		<div id="recurring_form">
+	        			<p>Book multiple walks at once over the timeframe specified below:</p>
+	        			<div id="recurring_dates">
+	        				<span><label id="label_start_recurring">From : </label><input id="in_start_date_rec" type="text"/></span>
+	        			 	<span><label id="label_end_recurring">to : </label><input id="in_end_date_rec" type="text"/></span>
+	        			 </div>
+	        		</div>
+	        		<label id="label_time_walk">Time of the walk (hours only, use a 24h format) : between <input id="in_time_early" type="text" maxlength="2" pattern="^([01]?[0-9]|[2][0-3])$"> :00 and <input id="in_time_late" type="text" maxlength="2" pattern="^([01]?[0-9]|[2][0-3])$"> :00</label><br/>
+	        		<label id="label_walk_duration">Walk duration : </label><div id="duration_radio"><label id="label_short_walk"><input id="in_short_walk" type="radio" value="short" name="walk_duration" checked="checked">	Short (20 to 30 minutes)</label><br/>
+	        		<label id="label_long_walk"><input id="in_long_walk" type="radio" value="long" name="walk_duration">	Long (45 to 60 minutes)</label></div><br/>
+	        		<label id="label_private"><input id="in_private_walk" type="checkbox"> Private (no other dogs)</label>
+        		</div>
+				
+        		<div id="petsit_form">
+        			<label id="label_petsit_date">Date of the stay:&nbsp;</label><input type="text" id="in_petsit_date">
+        			<div id="petsit_type" class="tab_container">
+        				<div id="pet_stop_tab" class="tab">Pet Stop</div><div id="overnight_tab" class="tab">Overnight</div>
+        			</div>
+        			<div id="pet_stop_form">
+        				<label id="label_petsit_time">From <input id="in_start_hour" type="text" maxlength="2"  pattern="^[0-9]{1,2}$"> :00 to <input id="in_end_hour" type="text" maxlength="2" pattern="^[0-9]{1,2}$"> :00</label>
+        			</div>
+        			<div id="overnight_form">
+        				<div id="overnight_options">
+        				<input id="in_simple_overnight" type="radio" name="overnight" value="simple" checked><label id="label_overnight_simple">Simple overnight (22:00PM - 7:00PM, Walks at 22:00PM and 6:30AM) </label><br/>
+        				<input id="in_full_overnight" type="radio" name="overnight" value="full"><label id="label_overnight_full">Full overnight (Simple overnight + Walks at 12:00PM and 18:00PM)</label>
+        				</div>
+        			</div>
+        		</div>
+	        		<div id="cart_section">
+		        		<button id="add_item_button">Add to cart</button>
+		        		<button id="remove_item_button">Remove from cart</button><br/>
+		        		<div id="cart_display"></div>
+	        		</div>
+	        		<label id="estimate"></label><br/>
+	        		<p id="comments_label">You may use the field below if your needs cannot be adequately described with the tool above or if you have any comments to add to your order.</p>
+	        		<textarea id="order_comments"></textarea>
+	        		<br/>
+        			<p id="order_feedback">&nbsp;</p>
+	        		<input id="order_submit" type="submit" value="Submit">
+	        	</form>
+        </div>
+        
+        <script src="../js/order.js"></script>
+	</body>
+</html>

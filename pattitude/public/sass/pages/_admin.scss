@@ -1,0 +1,48 @@
+body {
+    padding: 30px;   
+}
+
+#submit_search {
+    @extend %button;
+    display: inline-block;
+    
+    margin: 30px;   
+}
+
+table {
+    border: {
+        width: 2px;
+        style: solid;
+        color: $primary_color;
+        radius: 16px 4px;
+        }   
+        
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 5px 10px;   
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: scale-color($background-color, $lightness: 50%);
+        radius: 16px 4px;   
+    }
+}
+
+th {
+    background: $primary_color;
+    color: $secondary_color;   
+    
+    border-radius: 16px 4px;
+}
+
+.cid_cell, .cost_cell {
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        color: $secondary_color;
+        }   
+}

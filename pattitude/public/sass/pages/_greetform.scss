@@ -1,0 +1,154 @@
+.subform {
+    position: relative;
+    
+    padding: 20px 0 0;
+    margin: 20px 0;
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: $primary_color;
+        }   
+}
+
+.subform div {
+    display: block;
+    
+    text-align: left;
+    margin: 10px auto;
+
+    width: 250px;
+       
+}
+
+input[type=text] {
+    position: relative;
+    
+    width: 260px;
+    padding: 2px 5px;
+    
+    
+    font: {
+        size: 14pt;
+        family: $font_family;
+        }   
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    
+    margin: 4px 0px;
+    
+    font: {
+        size: 12pt;
+        }   
+}
+
+#in_postal {
+    width: 80px;   
+}
+
+#in_phone_house, #in_phone_mobile, #in_phone_extra, #in_phone_backup, #in_phone_vet {
+    width: 140px;   
+}
+
+#in_dog_name {
+    width: 100px;   
+}
+
+#in_dog_birth_year {
+    width: 60px;   
+}
+
+textarea {
+    width: 350px;
+    height: 48px;
+    
+    word-break: break-word;
+    resize: none;
+    
+    font: {
+        size: 12pt;
+        family: $font_family;
+        }   
+}
+
+#add_dog, #add_housepet {
+    @extend %button;
+    
+    margin: 15px auto;
+}
+
+#dog_list, #housepet_list {
+    background: scale-color($background_color, $lightness: 75%);
+    
+    width: 400px;
+    padding: 10px;
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: $primary_color;
+        radius: 16px 4px;
+        }   
+}
+
+%item_header {
+    position: relative;
+    display: block;
+    
+    padding: 5px 5px 5px 20px;
+        
+    background: $primary_color;
+    color: $secondary_color;
+    
+    font-size: 16pt;
+    
+    border: {
+        width: 4px;
+        style: solid;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);   
+    }
+}
+
+.dog_header {
+    @extend %item_header;
+}
+
+.pet_header {
+    @extend %item_header;   
+}
+
+#submit {
+    @extend %button;
+    
+    margin: 30px 0;   
+}
+
+.subform_label {
+    position: absolute;
+    
+    top: -32px;
+    left: 25%;
+    padding: 0 5px;
+    
+    background: scale-color($background_color, $lightness: 25%);
+    
+    font: {
+        size: 14pt;
+        weight: 800;   
+    }
+}
+
+#housepet_form, #housesit_form {
+    display: none;   
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+    <head>
+        <title>Confirmation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Checkout">
+        <link rel="stylesheet" href="css/checkout.css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    	<script src="js/jquery.js"></script>
+    </head>
+    <body>
+    	<div id="page_header">
+        		<div id="language_panel"><span id="french"><a href="../checkout.html">Français</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="img/MainLogo.png"></a>
+	            <div id="contact_info"><p id="contact_label">Contact Us: &emsp;&emsp;&emsp; </p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Home</a>
+        		<a class="header_link" href="pricing.html">Prices</a>
+        		<a class="header_link" href="order.html">Order</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">About</a>
+	        </div>
+        </div>
+
+        <div id="content">
+        	
+        	<div id="order_display">
+        		<p>Ordered services</p>
+        	</div>
+        	
+			<div id="meet_greet">
+				<p>First time doing business with us? We have to create your file through a free meet-and-greet with you and your dog(s). Once all questions have been mutually settled, you may confirm the transaction by providing us a key to the premisses. From then on, you will be able to submit and pay your orders online.</p>
+				<p>We are available from 8:00AM to 9:00PM, 7 days a week. Contact us to schedule the meeting by <a href="info@pattitude.ca">e-mail</a>, <a href="http://facebook.com/pattitudemtl">Facebook</a> or by phone at 514-220-0686.</p>
+			</div>	
+        	
+        	<form id="sign_in_form">
+        		<div class="tab_container">
+        			<div id="login_tab">Login</div><div id="signup_tab">Sign-Up</div>
+        		</div>
+        		<div class="field">
+	        		<label id="username_label">Username</label><br/>
+	        		<input id="in_username" maxlength="24" type="text">
+        		</div>
+        		<div class="field">
+        			<label id="password_label">Password</label><br/>
+        			<input id="in_password" maxlength="64" type="password">
+        		</div>
+        		<div id="password_confirm_field" class="field">
+        			<label id="password_confirm_label">Confirm password</label>
+        			<input id="in_password_confirm" type="password">
+        		</div>
+        		<div id="email_field" class="field">
+        			<label id="email_label">E-Mail address</label>
+        			<input id="in_email" type="text" maxlength="40" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        		</div>
+        		
+        		<input id="login" value="Confirmer" type="submit">
+        		<input id="signup" value="Confirmer" type="submit">
+        	</form>
+        	<div id="logout">Log out</div>
+        	
+        </div>
+        
+        <script type="text/javascript" src="js/checkout.js"></script>
+    </body>
+</html>

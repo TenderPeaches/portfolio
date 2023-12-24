@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <title>Pattitude</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/greetform.css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    	<script src="js/jquery.js"></script>
+    </head>
+    <body>
+    	<script src="js/customer.js"></script>
+    	
+    	<div id="page_header">
+        		<div id="language_panel"><span id="english"><a href="en/index.html">English</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="img/MainLogo.png"></a>
+	            <div id="contact_info"><p id="contact_label">Pour nous joindre: </p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Accueil</a>
+        		<a class="header_link" href="pricing.html">Tarifs</a>
+        		<a class="header_link" href="order.html">Réserver</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">À Propos</a>
+	        </div>
+        </div>
+        <div id="content">
+        	<form id="greet_form">
+	        	<div class="subform" id="customer_info">
+	        		<p class="subform_label">Informations du client</p>
+	        		<div class="field"><label class="label">Nom Complet *</label><br/>
+	        			<input id="in_customer_name" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Adresse *</label><br/>
+	        			<input id="in_address" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Code Postal</label><br/>
+	        			<input id="in_postal" pattern="^[HhJj][0-9][A-Za-z][ ]?[0-9][A-Za-z][0-9]$" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">No de Téléphone (Maison) *</label><br/>
+	        			<input id="in_phone_house" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" type="text">
+
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">No de Téléphone (Mobile)</label><br/>
+	        			<input id="in_phone_mobile" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">No de Téléphone (Autre)</label><br/>
+	        			<input id="in_phone_extra" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" type="text">
+	        		</div>
+	        	</div>
+	        	<div class="subform" id="backup_info">
+	        		<p class="subform_label">Contact d'Urgence</p>
+	        		<div class="field">
+	        			<label class="label">Nom</label><br/>
+	        			<input id="in_backup_name" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">No de Téléphone (Secours)</label><br/>
+	        			<input id="in_phone_backup" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Nom du Vétérinaire *</label><br/>
+	        			<input id="in_vet" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">No de Téléphone (Vétérinaire) *</label><br/>
+	        			<input id="in_phone_vet" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" type="text">
+	        		</div>
+	        	</div>
+	        	<div class="subform" id="dog_info">
+	        		<p class="subform_label">Informations du chien</p>
+	        		<div class="field">
+	        			<label class="label">Nom du chien *</label><br/>
+	        			<input id="in_dog_name" type="text" maxlength="12">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Sexe *</label><br/>
+	        			<input id="in_dog_gender_male" type="radio" value="male" name="dog_gender">  Mâle
+	        			<input id="in_dog_gender_female" type="radio" value="female" name="dog_gender">  Femelle
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Année de naissance *</label><br/>
+	        			<input id="in_dog_birth_year" maxlength="4" pattern="^\d{4}$" type="text">
+	        		</div>
+	        		
+	        		<div class="field">
+	        			<label class="label">Vacciné?</label><br/>
+	        			<input id="in_vaccined" type="checkbox">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Opéré?</label><br/>
+	        			<input id="in_neutered" type="checkbox">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Adopté depuis quand?</label><br/>
+	        			<input id="in_adopted_when" maxlength="20" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Adopté où?</label><br/>
+	        			<input id="in_adopted_where" maxlength="20" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Race</label><br/>
+	        			<input id="in_breed" maxlength="32"  type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Santé / Allergies / Médication</label><br/>
+	        			<textarea id="in_health" maxlength="256" ></textarea>
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Réactivité / Prédation</label><br/>
+	        			<textarea id="in_reactivity" maxlength="256"></textarea>
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Anxiété</label><br/>
+	        			<textarea id="in_anxiety" maxlength="256"></textarea>
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Morsure</label><br/>
+	        			<textarea id="in_biting" maxlength="256"></textarea>
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Autres comportements</label><br/>
+	        			<textarea id="in_behavior_extra" maxlength="256"></textarea>
+	        		</div>
+	        		<div id="add_dog">Ajouter</div>
+	        		<div id="dog_list"></div>
+	        	</div>
+	        		<input id="housesit_enabled" type="checkbox"> Intéressés par la garde à domicile?
+	        	<div class="subform" id="housepet_form">
+	        		<p class="subform_label">Informations des autres animaux</p>
+	        		<div class="field">
+	        			<label class="label">Nom de l'animal</label><br/>
+	        			<input id="in_pet_name" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Espèce</label><br/>
+	        			<input id="in_pet_specie" type="text">
+	        		</div>
+	        		<div class="field">
+	        			<label class="label">Soins</label><br/>
+	        			<textarea id="in_pet_care"></textarea>
+	        		</div>
+	        		<div id="add_housepet">Ajouter</div>
+	        		<div id="housepet_list"></div>
+	        	</div>
+	        	<div class="subform" id="housesit_form">
+	        		<p class="subform_label">Garde à Domicile</p>
+	        		<div class="field">
+	        			<label class="label">Plantes à arroser</label><br/>
+	        			<textarea id="in_plants"></textarea>
+	        		</div>
+
+	        		<div class="field">
+	        			<label class="label">Nourriture, location et quantité</label><br/>
+	        			<textarea id="in_food"></textarea>
+	        		</div>
+	        	</div>
+        	
+        		<div class="field">
+        			<label class="label">Autres informations</label><br/>
+        			<textarea id="in_extra"></textarea>
+        		</div>
+        		
+        		<input id="submit" type="submit" value="Soumettre">
+        	</form>
+        </div>
+        <script src="js/greetform.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,103 @@
+$form_width: 400px;
+
+#sign_in_form {
+    position: relative;
+    
+    width: $form_width;
+    margin: 0 auto;
+    padding: 0 40px 20px;
+    
+    background: scale-color($background_color, $lightness: 50%);   
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    
+    margin: 4px 0px;
+    
+    font: {
+        size: 12pt;
+        }   
+}
+
+input[type=text], input[type=password] {
+    position: relative;
+    
+    width: 260px;
+    padding: 2px 5px;
+    
+    
+    font: {
+        size: 14pt;
+        family: $font_family;
+        }   
+}
+
+
+.tab_container {
+    position: relative;
+    left: -40px;
+    
+    width: $form_width;
+    height: 44px;
+    line-height: 40px;
+    padding: 0px 40px;
+    margin: 10px 0 20px;
+    
+    background: scale-color($background_color, $lightness: 25%);
+    
+    font: {
+        size: 14pt;   
+    }
+}
+
+%form_tab {
+    position: relative;
+    display: inline-block;
+    
+ 
+    width: $form_width / 2 - 40px;
+    margin: 0px 8px;
+ 
+    background: $primary_color;
+    color: $secondary_color;
+    
+    border: {
+        radius: 16px 4px;
+        width: 2px;
+        color: $background_color;
+        style: solid;
+    }
+    
+    box-shadow: -2px -2px 2px scale-color($primary_color, $lightness: 50%);
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);
+    }
+}
+
+#login_tab {
+    @extend %form_tab;
+}
+
+#signup_tab {
+    @extend %form_tab;
+}
+
+input[type=submit] {
+    @extend %button;
+    
+    margin: 40px 0px 20px;   
+}
+
+#password_confirm_field, #email_field {
+    display: none;   
+}
+
+#signup {
+    display: none;   
+}

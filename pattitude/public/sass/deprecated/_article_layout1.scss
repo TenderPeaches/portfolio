@@ -1,0 +1,221 @@
+
+
+
+#content {
+  border-radius: 96px;
+}
+
+%link {
+  border-radius: 2px 8px;
+}
+
+a {
+
+  font-weight: 900;
+  padding: 2px;
+
+  border-radius: 4px;
+  border: scale-color($primary_color, $lightness: 55%) 1px none;
+
+  &:link {
+    background: scale-color($primary_color, $alpha: -60%) ;
+    color: scale-color($primary_color, $lightness: 55%) ;
+  }
+
+  &:visited {
+    background: scale-color($tertiary_color, $alpha: -60%) ;
+    color: scale-color($tertiary_color, $lightness: 25%) ;
+  }
+
+  &:hover {
+    background: scale-color($secondary_color, $alpha: -60%) ;
+    color: scale-color($secondary_color, $lightness: 25%) ;
+  }
+}
+
+.quote {
+    text-align: center;
+}
+
+.quote_text {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.quote_author {
+  text-align: right;
+  padding-right: 15%;
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+
+  }
+}
+
+.dark_quote_author {
+  @extend .quote_author;
+
+  & > a {
+    @extend %link;
+
+        &:link {
+          background: scale-color($tertiary_color, $alpha: -50%, $lightness: 75%);
+          color: scale-color($tertiary_color, $lightness: -5%);
+        }
+        &:visited {
+          background: scale-color($secondary_color, $alpha: -60%);
+          color: scale-color($primary_color, $lightness: -25%);
+          border-color: scale-color($primary_color, $lightness: -25%);
+        }
+
+        &:hover {
+          background: scale-color($secondary_color, $alpha: -80%);
+          color: scale-color($secondary_color, $lightness: -0%);
+          border-color: $secondary_color;
+        }
+
+        border: $tertiary_color 1px solid;
+        text-decoration: none;
+  }
+
+}
+
+%bubble {
+  padding: $padding_large;//2.5% 5% 2.5% 5%;
+
+  font-size: 18px;
+  border-radius: $border_radius_large;
+  line-height: 1.5em;
+
+  margin: 20px 10px;
+}
+.our_word {
+  @extend %bubble;
+
+  background: scale-color($primary_color, $lightness: -40%);
+  color: $secondary_color;
+
+  /*a {
+
+    &:link {
+      color: $tertiary_color;
+      //text-shadow: 0 0 1px $primary_color;
+    }
+
+    &:visited {
+      color: scale-color($primary_color, $lightness: 50%);
+      //text-shadow: 0 0 1px $primary_color;
+    }
+
+    &:hover {
+      color: $secondary_color;
+      //text-shadow: 0 0 1px $secondary_color;
+    }
+  }*/
+}
+
+.qc_overview {
+  @extend %bubble;
+
+  background: scale_color($quebec_color, $lightness: -25%);
+  color: $secondary_color;
+  /*
+  a {
+
+    &:link {
+      color: $tertiary_color;
+      //text-shadow: 0 0 1px $tertiary_color;
+    }
+
+    &:visited {
+      color: scale-color($quebec_color, $lightness: 25%);
+      //text-shadow: 0 0 1px scale-color($quebec_color, $lightness: 25%);
+    }
+
+    &:hover {
+      color: $secondary_color;
+      //text-shadow: 0 0 1px $secondary_color;
+    }
+
+  }
+  */
+}
+
+.study_list {
+  @extend %bubble;
+
+  background: scale-color($tertiary_color, $lightness: 15%);
+  color: $secondary_color;
+  /*
+  a {
+    &:link {
+      color: scale-color($primary_color, $lightness: -35%);
+    }
+
+    &:visited {
+      color: scale-color($secondary_color, $lightness: -25%);
+    }
+
+    &:hover {
+      color: $secondary_color;
+    }
+  }
+  */
+  & > li {
+    background: scale-color($tertiary_color, $lightness: -5%);
+    padding: $padding_large;
+    border-radius: $border_radius_large;
+
+    margin: 20px 10px;
+  }
+}
+
+.study_detail {
+
+  padding: 5px 20px 0;
+
+  & > li {
+    padding: 5px 0;
+  }
+}
+
+
+.study_conclusions, .study_recommendations, .complementary_resource {
+  border-radius: $border_radius_large;
+  padding: $padding_large;
+  margin: 20px 0;
+  background: scale-color($tertiary_color, $lightness: -15%);
+
+  font-weight: 900;
+
+  li {
+      font-weight: 500;
+  }
+
+  & > ol > li {
+    padding: 10px 0;
+  }
+
+  p {
+    font-weight: 500;
+  }
+}
+
+.ackschually {
+  @extend %bubble;
+  background: $wrong_color;
+  /*
+  a {
+    &:link {
+      color: $tertiary_color;
+    }
+    &:visited {
+      color: scale-color($secondary_color, $lightness: -25%);
+    }
+    &:hover {
+      color: $secondary_color;
+    }
+  }*/
+}

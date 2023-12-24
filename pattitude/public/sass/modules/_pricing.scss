@@ -1,0 +1,117 @@
+#in_postal_short {
+    position: relative;
+    display: inline-block;
+
+    width: 48px;
+    margin: 15px 0 30px 5px;
+    padding: 2px 0 2px 2px;
+    font: {
+        family: $font_family;
+        size: 14pt;
+    }
+
+    text-align: center;
+}
+
+.pricing_table {
+    position: relative;
+    display: inline-block;
+    border-collapse: collapse;
+
+    td {
+        padding: 5px;
+        text-align: center;
+        background: scale-color($background_color, $lightness: 75%);
+        border: {
+            width: 1px;
+            style: solid;
+            color: $primary_color;
+            }
+    }
+
+    th {
+        padding: 5px 30px;
+
+         border: {
+            width: 1px;
+            style: solid;
+            color: $primary_color;
+         }
+
+         background: scale-color($background_color, $lightness: 50%);
+      }
+
+      .selected_header {
+          background: scale-color($tertiary_color, $lightness: -25%);
+          color: $secondary_color;
+      }
+
+      .selected {
+          background: $tertiary_color;
+          color: $secondary_color;
+      }
+}
+#submit_zone {
+    @extend %button;
+    display: inline-block;
+
+    margin: 0 50px;
+}
+
+#zone {
+    text-align: center;
+}
+
+#out_zone {
+    display: inline-block;
+    position: relative;
+
+    padding: 5px 20px;
+
+    top: -10px;
+
+    font-size: 16pt;
+
+    background: $primary_color;
+    color: $secondary_color;
+
+    border-radius: 16px 4px;
+}
+
+#zone_table {
+    display: inline-block;
+
+    border: {
+        width: 2px;
+        style: solid;
+        color: $primary_color;
+    }
+    background: scale-color($background_color, $lightness: 50%);
+
+    border-collapse: collapse;
+
+    td, th {
+       border: {
+           width: 1px;
+           style: solid;
+           color: $primary_color;
+           }
+
+       padding: 5px 10px;
+
+   }
+
+   td {
+       background: scale-color($background-color, $lightness: 75%);
+   }
+}
+
+.borough {
+    text-align: left;
+
+    font-weight: 800;
+}
+
+.postal_codes {
+    text-align: right;
+}

@@ -1,0 +1,95 @@
+
+.ui-datepicker {
+    display: none;
+    
+    padding: 25px;
+    
+    background: scale-color($background_color, $lightness: 25%);
+    color: $primary_color;   
+    
+    border: {
+        width: 2px;
+        radius: 2px;
+        style: solid;
+        color: $primary_color;   
+    }
+}
+
+.ui-datepicker td {
+    width: 30px;   
+}
+
+.ui-datepicker tbody td {
+    padding: 4px 0;
+    
+    text-align: center;
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: scale-color($primary_color, $lightness: 50%);
+    }   
+    
+    box-shadow: 0 0 1px $primary_color;
+    
+    &:hover {
+        background: scale-color($tertiary_color, $lightness: 90%);
+        border-color: $tertiary-color;
+        color: $disabled_color;   
+        box-shadow: 0 0 2px $tertiary_color;
+    }
+}
+
+
+.ui-datepicker tbody td a {
+    color: $primary_color;
+}
+
+.ui-datepicker table {
+    background: scale-color($background-color, $lightness: 50%);
+    
+}
+
+.ui-datepicker-header {
+    padding: 10px;
+    
+    background: $primary_color;
+    color: $secondary_color;
+    
+    text-align: center;
+}
+
+.ui-datepicker-prev {
+    position: relative;
+    
+    float: left;   
+    
+    cursor: pointer;
+    
+    &:hover {
+        color: scale-color($tertiary_color, $lightness: 25%);   
+    }
+}
+
+.ui-datepicker-next {
+    position: relative;
+    
+    float: right;
+    
+    cursor: pointer;
+    
+    &:hover {
+        color: scale-color($tertiary_color, $lightness: 25%);   
+    }
+}
+.ui-datepicker thead {
+    background: scale-color($primary_color, $lightness: 50%);
+    
+    margin: 0;
+    padding: 5px;
+    
+}
+
+.ui-datepicker tbody {
+    padding: 5px;   
+}

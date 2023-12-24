@@ -1,0 +1,189 @@
+#content {
+  background: #e3f8ff;
+  font-family: courier new; }
+
+#players_table, #drafted_team_table {
+  position: relative;
+  border-collapse: collapse;
+  background: #c6f1ff;
+  table-layout: fixed; }
+  #players_table #players_table_subheader_row, #drafted_team_table #players_table_subheader_row {
+    font-size: 8pt; }
+  #players_table th, #drafted_team_table th {
+    border: blue 1px solid;
+    padding: 5px 4px; }
+  #players_table td, #drafted_team_table td {
+    font-size: 10pt;
+    padding: 4px 2px; }
+  #players_table .data_cell, #drafted_team_table .data_cell {
+    border: #8ce1ff 1px solid;
+    width: 1%;
+    flex: 1 1 0; }
+  #players_table td, #players_table th, #drafted_team_table td, #drafted_team_table th {
+    text-align: center; }
+  #players_table .position_cell, #drafted_team_table .position_cell {
+    width: 2%;
+    flex: 2 1 0; }
+  #players_table .name_cell, #drafted_team_table .name_cell {
+    width: 12%;
+    flex: 12 1 0; }
+  #players_table .age_cell, #drafted_team_table .age_cell {
+    width: 1%; }
+  #players_table .currentTeam_cell, #drafted_team_table .currentTeam_cell {
+    width: 1.2%;
+    flex: 1.2 1 0; }
+  #players_table .depth_cell, #drafted_team_table .depth_cell {
+    width: 3%;
+    flex: 3 1 0; }
+  #players_table .gamesPlayed_cell, #drafted_team_table .gamesPlayed_cell {
+    width: 1%;
+    flex: 1 1 0; }
+  #players_table .timeOfIce_cell, #drafted_team_table .timeOfIce_cell {
+    width: 3%;
+    flex: 3; }
+  #players_table .plusMinus_cell, #drafted_team_table .plusMinus_cell {
+    width: 3%; }
+  #players_table .notes_cell, #drafted_team_table .notes_cell {
+    width: 6%;
+    flex: 6; }
+  #players_table .commit_cell, #players_table .draft_cell, #drafted_team_table .commit_cell, #drafted_team_table .draft_cell {
+    width: 2%; }
+  #players_table .player_row .notes_cell, #drafted_team_table .player_row .notes_cell {
+    cursor: text; }
+  #players_table .player_row :nth-child(2), #drafted_team_table .player_row :nth-child(2) {
+    cursor: pointer; }
+    #players_table .player_row :nth-child(2):hover, #drafted_team_table .player_row :nth-child(2):hover {
+      color: #00abe3;
+      box-shadow: 0 0 2px 1px #00abe3; }
+  #players_table .player_row:hover td, #drafted_team_table .player_row:hover td {
+    background: #82e0ff;
+    border-color: #c6f1ff; }
+  #players_table .player_row:hover .action_cell, #drafted_team_table .player_row:hover .action_cell {
+    color: #00abe3;
+    border-color: #00abe3; }
+  #players_table .drafted, #drafted_team_table .drafted {
+    background: black;
+    color: grey; }
+  #players_table .projected_stat, #drafted_team_table .projected_stat {
+    background: #d9f6ff;
+    color: #00abe3;
+    cursor: text; }
+    #players_table .projected_stat:hover, #drafted_team_table .projected_stat:hover {
+      background: #00abe3;
+      color: #e3f8ff; }
+    #players_table .projected_stat input, #drafted_team_table .projected_stat input {
+      width: 90%; }
+  #players_table .action_header, #drafted_team_table .action_header {
+    background: #55d5ff; }
+  #players_table .commit_button, #drafted_team_table .commit_button {
+    background: green;
+    color: #e3f8ff;
+    cursor: pointer; }
+    #players_table .commit_button:hover, #drafted_team_table .commit_button:hover {
+      background: #00e000;
+      color: #e3f8ff;
+      border: #e3f8ff 1px ridge; }
+  #players_table .draft_button, #drafted_team_table .draft_button {
+    background: #00abe3;
+    color: #e3f8ff;
+    cursor: pointer; }
+    #players_table .draft_button:hover, #drafted_team_table .draft_button:hover {
+      background: #d4f5ff;
+      color: #e3f8ff;
+      border: #e3f8ff 1px ridge; }
+  #players_table .sort_header, #drafted_team_table .sort_header {
+    background: #00abe3;
+    cursor: pointer; }
+    #players_table .sort_header:hover, #drafted_team_table .sort_header:hover {
+      background: #005571;
+      color: #e3f8ff; }
+  #players_table .current_sort, #drafted_team_table .current_sort {
+    background: #002b39; }
+
+.option_pane {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  background: #00abe3;
+  color: #e3f8ff;
+  font-family: monospace; }
+  .option_pane .option_subpanel {
+    padding: 5px 30px;
+    margin: 5px;
+    line-height: 30px;
+    border: #e3f8ff 2px dashed;
+    border-spacing: 5px;
+    text-align: center;
+    table-layout: fixed; }
+    .option_pane .option_subpanel .option_switch {
+      font-size: 14pt;
+      padding: 5px 20px;
+      height: 30px;
+      text-align: center;
+      border: #e3f8ff 2px ridge;
+      cursor: pointer; }
+      .option_pane .option_subpanel .option_switch:hover {
+        background: #e3f8ff;
+        color: #47d2ff; }
+      .option_pane .option_subpanel .option_switch:active {
+        background: #003344; }
+    .option_pane .option_subpanel td:hover, .option_pane .option_subpanel th:hover {
+      color: #47d2ff; }
+    .option_pane .option_subpanel td:active, .option_pane .option_subpanel th:active {
+      background: #003344; }
+    .option_pane .option_subpanel .active_filter {
+      background: #00abe3;
+      color: #c6f1ff; }
+    .option_pane .option_subpanel .passive_filter {
+      background: #c6f1ff;
+      color: #00abe3;
+      border-style: inset;
+      box-shadow: 0 0 1px #e3f8ff; }
+  .option_pane #stat_options {
+    white-space: nowrap;
+    width: 240px; }
+
+.option_button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background: #c6f1ff;
+  color: #00abe3;
+  border: #c6f1ff 2px outset;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 20px; }
+  .option_button:hover {
+    border-style: inset;
+    background: #00abe3;
+    color: #c6f1ff; }
+  .option_button:active {
+    background: #003344; }
+
+.option_title {
+  background: #00b6f1;
+  border: #c6f1ff 1px inset;
+  padding: 5px 10px;
+  font-size: 12pt; }
+
+#head_option_pane {
+  margin: 0px 0px 20px;
+  padding: 5px;
+  border: #00abe3 2px groove; }
+  #head_option_pane #refresh_filters_button {
+    font-size: 32pt;
+    margin: 20px 50px; }
+  #head_option_pane #depth_filter tr:hover {
+    background: #e3f8ff;
+    color: #00abe3;
+    cursor: pointer; }
+  #head_option_pane #depth_filter td, #head_option_pane #depth_filter th {
+    font-size: 16pt;
+    padding: 2px 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: #e3f8ff 2px ridge; }
+
+/*# sourceMappingURL=index.css.map */

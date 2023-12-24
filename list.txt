@@ -1,0 +1,11 @@
+* Pattitude Website: E:\Projets\pattitude\public (HTML/CSS/JS, no frameworks)
+* Custard: http://commercial.custardcs.com/ (HTML/CSS/JS, no frameworks)
+* Custard v1: E:\Old\Old USB\bdns\custard\nrgsto
+* Custard v2: https://custardenergy.com/ (WordPress)
+* Bandaid: E:\Projets\bandaid (Ruby on Rails)
+* LanguageAid: E:\Projets\lang\rails\lang (Ruby on Rails)
+* Miredo: E:\Projets\mp\miredo (Ruby on Rails)
+* ProjMgr: E:\Projets\projMgr (Ruby on Rails)
+* FantaSea: E:\Old\Stuff\fantasea (HTML/CSS/JS)
+
+* DND Custom pages: Old laptop

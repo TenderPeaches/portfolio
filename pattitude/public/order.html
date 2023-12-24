@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <title>Réservation en ligne de Marches ou Gardes à Domicile | Pattitude</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Réservez rapidement vos marches de chiens ou gardes animales à domicile en ligne avec notre outil bâti sur mesure.">
+		<meta name="author" content="Pattitude">
+        <link rel="stylesheet" href="css/order.css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.js"></script>
+    </head>
+    <body>
+		<script src="js/walk.js"></script>
+		<script src="js/petsit.js"></script>
+		
+    	<div id="page_header">
+        		<div id="language_panel"><span id="english"><a href="en/order.html">English</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="img/MainLogo.png" alt="Pattitude"></a>
+	            <div id="contact_info"><p id="contact_label">Pour nous joindre: </p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Accueil</a>
+        		<a class="header_link" href="pricing.html">Tarifs</a>
+        		<a class="header_link" href="order.html">Réserver</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">À Propos</a>
+	        </div>
+        </div>
+        
+        <div id="content">
+        	<div id="first_time_choice">
+        		<p>Avez-vous déja fait affaire avec Pattitude?</p>
+	        	<input type="radio" name="first_time" value="no" checked="checked">&nbsp; Non
+	        	<input type="radio" name="first_time" value="yes">&nbsp; Oui
+        	</div>
+        	<form id="first_time_form">
+        		<p>Laissez-nous un message détaillant vos besoins, votre nom et la méthode par laquelle vous désirez être rejoints. Nous vous contacterons dès que possible dans le but de prendre rendez-vous pour une consultation à domicile gratuite. </p>
+        		<textarea id="first_time_text"></textarea>
+        		<p id="first_time_feedback">&nbsp;</p>
+        		<div id="first_time_submit">Soumettre</div>
+        	</form>
+        	<form id="order_form">
+        	<p>Remplissez les informations ci-dessous pour obtenir un estimé ou soumettre une réservation : </p>
+        	<div id="customer_info">
+        	<label id="label_name">Nom :</label>
+        	<input id="in_client_name" type="text"><br/>
+        	<label id="label_contact">Comment vous rejoindre :</label>
+        	<input id="in_client_contact" type="text"><br/>
+        	</div>
+	        	<label id="label_zip">Code Postal (3 premiers caractères)* : <input id="in_zip" type="text" pattern="^[hHjJ][0-9][a-zA-Z]$"/></label>
+	        	<div id="item_type" class="tab_container">
+	        		<div id="walk_tab" class="tab">Marches</div><div class="tab" id="housestay_tab">Garde à domicile</div>
+	        	</div>
+	        	<div id="walk_form">
+	        		
+	        		<div id="walk_type" class="tab_container">
+	        			<div id="single_tab" class="tab">À l'unité</div><div id="recurring_tab" class="tab">Récurrentes</div>
+	        		</div>
+	        		<div id="single_form">
+	        			<p>Pour l'achat d'une marche à l'unité</p>
+	        			<label id="label_date_single">Date : <input id="in_date_single" type="text"/></label></div>
+	        		<div id="recurring_form">
+	        			<p>Pour l'achat de plusieurs marches à une fréquence régulière</p>
+	        			<div id="recurring_dates">
+	        				<span><label id="label_start_recurring">À partir du : </label><input id="in_start_date_rec" type="text"/></span>
+	        			 	<span><label id="label_end_recurring">jusqu'au : </label><input id="in_end_date_rec" type="text"/></span>
+	        			 </div>
+	        		</div>
+	        		<label id="label_time_walk">Heure de la marche : entre <input id="in_time_early" type="text" maxlength="2" pattern="^([01]?[0-9]|[2][0-3])$"> h et <input id="in_time_late" type="text" maxlength="2" pattern="^([01]?[0-9]|[2][0-3])$"> h</label><br/>
+	        		<label id="label_walk_duration">Durée de la marche : </label><div id="duration_radio"><label id="label_short_walk"><input id="in_short_walk" type="radio" value="short" name="walk_duration" checked="checked">	Courte (20 à 30 minutes)</label><br/>
+	        		<label id="label_long_walk"><input id="in_long_walk" type="radio" value="long" name="walk_duration">	Longue (45 à 60 minutes)</label></div><br/>
+	        		<label id="label_private"><input id="in_private_walk" type="checkbox"> Privée (sans marche de groupe)</label>
+        		</div>
+        		<div id="petsit_form">
+        			<label id="label_petsit_date">Date de la garde :&nbsp;</label><input type="text" id="in_petsit_date">
+        			<div id="petsit_type" class="tab_container">
+        				<div id="pet_stop_tab" class="tab">Simple</div><div id="overnight_tab" class="tab">Nuitée</div>
+        			</div>
+        			<div id="pet_stop_form">
+        				<label id="label_petsit_time">De <input id="in_start_hour" type="text" maxlength="2"  pattern="^[0-9]{1,2}$"> h à <input id="in_end_hour" type="text" maxlength="2" pattern="^[0-9]{1,2}$"> h</label>
+        			</div>
+        			<div id="overnight_form">
+        				<div id="overnight_options">
+        				<input id="in_simple_overnight" type="radio" name="overnight" value="simple" checked><label id="label_overnight_simple">Nuitée Simple (22h - 7h, Marches à 22h et 6h30) </label><br/>
+        				<input id="in_full_overnight" type="radio" name="overnight" value="full"><label id="label_overnight_full">Nuitée complète (Nuitée Simple + Marches à 12h et 18h) </label>
+        				</div>
+        			</div>
+        		</div>
+	        		<div id="cart_section">
+		        		<button id="add_item_button">Ajouter</button>
+		        		<button id="remove_item_button">Supprimer</button><br/>
+		        		<div id="cart_display"></div>
+	        		</div>
+	        		<label id="estimate"></label><br/>
+	        		<p id="comments_label">Si vos besoins ne peuvent être adéquatement décrits avec l'outil ci-haut ou encore si vous avez des commentaires liés à votre commande, veuillez utiliser le champ ci-dessous pour nous en faire part.</p>
+	        		<textarea id="order_comments"></textarea>
+	        		<br/>
+        			<p id="order_feedback">&nbsp;</p>
+	        		<input id="order_submit" type="submit" value="Soumettre">
+	        	</form>
+        </div>
+        
+        <script src="js/order.js"></script>
+	</body>
+</html>

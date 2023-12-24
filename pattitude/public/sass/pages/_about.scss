@@ -1,0 +1,46 @@
+#content {
+    text-align: justify;   
+}
+
+#about {
+    padding: 30px;
+    
+    border: {
+        width: 3px;
+        style: ridge;
+        color: $background_color;
+        radius: 16px 4px;
+    } 
+    
+    background: scale-color($background_color, $lightness: 75%);   
+}
+
+#about img {
+    position: relative;
+    display: inline-block;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        margin: 10px 50px;
+        width: 280px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;   
+    }
+    
+}   
+
+#image_1 {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 320px;
+        float:right;   
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+}

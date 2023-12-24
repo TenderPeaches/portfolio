@@ -1,0 +1,368 @@
+$header_height: 140px;
+$header_zindex: 1;
+
+$navbar_height: 40px;
+$navlink_border_width: 0px;
+
+
+#page_header {
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    @media only screen and (min-width: $desktop_min_width) {
+        position: fixed;
+        z-index: $header_zindex;
+        height: $header_height;
+    } 
+     
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        position: relative;
+    }
+    
+
+    background: scale-color($background_color, $lightness: 50%);
+    color: $primary_color;
+    text-align: center;
+}
+
+
+#navbar {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    
+    line-height: $navbar_height - (2 * $navlink_border_width);
+        
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        height: $navbar_height;
+    }    
+
+    background: scale-color($primary_color, $lightness: 50%);
+    
+    color: $primary_color;
+    text-align: center;
+    
+    border-style: solid;
+    border-width: 1px 0px;
+    border-color: $primary_color; 
+}
+
+.header_link {  
+    display: inline-block;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 120px;       
+        padding: 0px 10px;
+        margin: 0 5px;
+        height: $navbar_height - (2 * $navlink_border_width);
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 90%;
+        padding: 10px 0;
+        margin: 10px 5%;
+        font-size: 20pt;
+    }
+    
+    background: $secondary_color;
+    color: $primary_color;
+    text-decoration: none;
+    
+    border: $navlink_border_width solid $secondary_color;
+    border-radius: 16px 4px;
+    
+    box-shadow: 0 0 5px $primary_color inset;
+    
+    cursor: pointer;
+    
+    &:hover {
+        
+        background: $tertiary_color;
+        color: $secondary_color;
+        box-shadow: 0 0 15px scale-color($primary_color, $lightness: 50%) inset;
+        border: $navlink_border_width solid scale-color($tertiary_color, $lightness: 50%);
+    }
+    
+    &:hover .down_arrow {
+        border-top-color: $secondary_color;
+    }
+    
+    &:hover .header_submenu {
+        display: block;
+    }
+}
+
+.header_submenu {
+    display: none;
+    position: absolute;
+    top: $navbar_height - $navlink_border_width;
+    left: 0;
+    
+    width: 250px;
+    line-height: 40px;
+    
+    background: $primary_color;
+}
+
+.header_submenu a {
+    color: $secondary_color;
+    text-decoration: none;
+}
+
+.header_subitem {
+    display: block;
+    
+    height: 40px;
+    
+    border-bottom: 1px $background_color solid;
+    
+    &:hover {
+        background: $tertiary_color;
+    }
+}
+
+#header_logo {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        display: inline-block;
+        width: 40%;
+        height: $header_height - $navbar_height;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        display: block;
+    }
+    position: relative;
+    
+    background: $primary_color;
+    color: $secondary_color;
+    text-decoration: none;
+    
+    cursor: pointer;
+    
+    box-shadow: 0 0 10px $primary_color;
+    
+    &:hover {
+        box-shadow: 0 0 15px $tertiary_color;
+    }
+    
+    
+}
+
+#header_logo img {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        height: $header_height - $navbar_height;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;
+    }
+    position: relative;
+    
+}
+
+#contact_info {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        position: absolute;
+        display: inline-block;
+        
+        right: 0;
+        top: -10px;
+        width: 400px;
+        height: $header_height - $navbar_height;
+        padding: 10px 0;
+        background: linear-gradient(90deg, $primary_color 20%, scale-color($primary_color, $lightness: 35%) 80%, $background_color);
+        text-align: left;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        position: relative;
+        display: block;
+        
+        padding: 20px 0;
+        background: $primary_color;
+        text-align: center;
+    }
+    
+    color: $secondary_color;
+    
+    font-size: 14pt;
+}
+
+#contact_info p {
+    position: relative;
+    display: inline-block;   
+    
+    padding: 0 5px;
+}
+
+#contact_label {
+    font-weight: 800;   
+}
+
+#email_link {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        left: 5px;
+        top: -20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    
+    position: relative;
+    display: inline-block;
+    
+    
+    color: $secondary_color;
+    
+    &:visited {
+        color: $secondary_color;
+        }    
+}
+
+#fb_link {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        left: 50px;
+        top: -8px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    position: relative;
+    display: inline-block;
+    
+    
+    width: 32px;
+    height: 32px;
+    
+    background-color: $primary_color;
+    background-size: 32px 32px;
+    background-image: url('../img/fb_white.png');
+    
+    box-shadow: 0 0 3px $secondary_color;
+    
+    &:hover {
+        background-image: url('../img/fb_hover.png');
+        box-shadow: 0 0 5px $tertiary_color;  
+        }   
+        
+}
+
+#language_panel {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        position: absolute;
+        display: inline-block;
+        height: $header_height - $navbar_height;
+        line-height: $header_height - $navbar_height;
+            
+        width: 400px;
+        left: 0;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        position: relative;
+        display: block;
+        
+        width: 100%;
+    }
+    
+    
+    
+    font-size: 22pt;
+}
+
+#language_panel a {
+    text-decoration: none;
+    color: $secondary_color;
+    
+    &:visited {
+        color: $secondary_color;   
+    }
+}
+
+#english, #french {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        background: $tertiary_color;
+        width: 100%;
+        margin: 10px 0;
+    }
+    padding: 10px 15px;
+    
+    background: $primary_color;
+    color: $secondary_color;
+    
+    cursor: pointer;
+    
+    font-size: 14pt;
+    
+    box-shadow: 0 0 5px $primary_color;
+    
+    &:hover {
+        background: $tertiary_color;
+        box-shadow: 0 0 5px $tertiary_color;   
+    }
+}
+
+#sign_in {
+    padding: 10px 15px;
+    
+    background: $primary_color;
+    color: $secondary_color;
+    
+    cursor: pointer;
+    
+    font-size: 16pt;
+    
+    box-shadow: 0 0 5px $primary_color;
+    
+    border: {
+        width: 2px;
+        style: solid;
+        color: $secondary_color;   
+    }
+    
+    &:hover {
+        background: $tertiary_color;
+        color: $secondary_color;
+        box-shadow: 0 0 5px $tertiary_color;
+        
+        border: {
+            width: 2px;
+            style: solid;
+            color: scale-color($tertiary_color, $lightness: 50%);    
+        }    
+    }   
+}

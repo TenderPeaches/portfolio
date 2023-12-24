@@ -1,0 +1,371 @@
+// Plan is to use a flexbox container for the header elements
+// Use a grid as the the stats table, with the flexbox as its header
+
+// Colors
+$primary_color: #c6f1ff;
+$secondary_color: scale-color($primary_color, $lightness: 50%);
+$tertiary_color: scale_color($primary_color, $lightness: -50%);
+$click_color: scale-color($primary_color, $lightness: -85%);
+
+$confirm_color: green;
+$cancel_color: red;
+
+
+#content {
+  background: $secondary_color;
+  font-family: courier new;
+}
+$player_pos_flex: 2;
+$player_name_flex: 12;
+$player_age_flex: 1;
+$player_team_flex: 1.2;
+$player_depth_flex: 3;
+$player_stat_flex: 1;
+$player_games_played_flex: 1;
+$player_toi_flex: 3;
+$player_notes_flex: 6;
+$action_commit_flex: 2;
+
+$std_width: 1%;
+
+$player_pos_width: $player_pos_flex * $std_width;
+$player_name_width: $player_name_flex * $std_width;
+$player_age_width: $player_age_flex * $std_width;
+$player_team_width: $player_team_flex * $std_width;
+$player_depth_width: $player_depth_flex * $std_width;
+$player_stat_width: $player_stat_flex * $std_width;
+$player_games_played_width: $player_games_played_flex * $std_width;
+$player_toi_width: $player_toi_flex * $std_width;
+$player_notes_width: $player_notes_flex * $std_width;
+$action_commit_width: $action_commit_flex * $std_width;
+#players_table, #drafted_team_table {
+  position: relative;
+  border-collapse: collapse;
+  background: $primary_color;
+  table-layout: fixed;
+
+  #players_table_subheader_row {
+    font-size: 8pt;
+
+  }
+
+  th {
+
+    border: blue 1px solid;
+    padding: 5px 4px;
+  }
+
+  td {
+    font-size: 10pt;
+    padding: 4px 2px;
+  }
+
+  .data_cell {
+    //border: #d8f5ff 1px solid;
+    border: #8ce1ff 1px solid;
+      width: $player_stat_width;
+      flex: $player_stat_flex 1 0;
+  }
+
+  td, th {
+    text-align: center;
+  }
+
+    .goals_cell, .assists_cell, .points_cell, .powerPlayPoints_cell, .shortHandedPoints_cell, .penaltyMinutes_cell, .shotsOnGoal_cell, .shotPercentage_cell, .hits_cell, .blockedShots_cell, .fScore_cell, .yScore_cell {
+    }
+  .position_cell {
+    width: $player_pos_width;
+    flex: $player_pos_flex 1 0;
+  }
+
+  .name_cell {
+    width: $player_name_width;
+    flex: $player_name_flex 1 0;
+  }
+
+  .age_cell {
+    width: $player_age_width;
+  }
+
+  .currentTeam_cell {
+    width: $player_team_width;
+    flex: $player_team_flex 1 0;
+  }
+
+
+  .depth_cell {
+    width: $player_depth_width;
+    flex: $player_depth_flex 1 0;
+  }
+
+
+  .gamesPlayed_cell {
+    width: $player_games_played_width;
+    flex: $player_games_played_flex 1 0;
+  }
+
+  .timeOfIce_cell {
+    width: $player_toi_width;
+    flex: $player_toi_flex;
+  }
+
+  .plusMinus_cell {
+    width: $player_stat_width * 3;
+  }
+
+  .notes_cell {
+    width: $player_notes_width;
+    flex: $player_notes_flex;
+  }
+
+  .commit_cell, .draft_cell {
+    width: $action_commit_width;
+  }
+
+  .player_row {
+    .notes_cell {
+      cursor: text;
+    }
+
+    :nth-child(2) {
+      cursor: pointer;
+      &:hover {
+        color: $tertiary_color;
+        box-shadow: 0 0 2px 1px $tertiary_color;
+      }
+    }
+
+
+    &:hover {
+      td {
+          background: scale-color($primary_color, $lightness: -15%);
+          border-color: $primary_color;
+      }
+
+      .action_cell {
+        color: $tertiary_color;
+        border-color: $tertiary_color;
+      }
+    }
+  }
+
+  .drafted {
+    background: black;
+    color: grey;
+  }
+
+  .projected_stat {
+
+    background: scale-color($primary_color, $lightness: 33%);
+    color: $tertiary_color;
+    cursor: text;
+
+    &:hover {
+      background: $tertiary_color;
+      color: $secondary_color;
+    }
+
+    input {
+      width: 90%;
+    }
+  }
+
+  .action_header {
+    background: scale-color($primary_color, $lightness: -25%);
+  }
+
+  .commit_button {
+    background: $confirm_color;
+    color: $secondary_color;
+
+    cursor: pointer;
+
+    &:hover {
+      background: scale-color($confirm_color, $lightness: 25%);
+      color: $secondary_color;
+
+      border: $secondary_color 1px ridge;
+    }
+  }
+
+  .draft_button {
+    background: $tertiary_color;
+    color: $secondary_color;
+
+    cursor: pointer;
+
+    &:hover {
+      background: scale-color($primary_color, $lightness: 25%);
+      color: $secondary_color;
+
+      border: $secondary_color 1px ridge;
+    }
+  }
+
+  .sort_header {
+    background: scale-color($tertiary-color, $lightness: 0%);
+    cursor: pointer;
+    &:hover {
+      background: scale-color($tertiary_color, $lightness: -50%);
+      color: $secondary_color;
+    }
+  }
+
+  .current_sort {
+    background: scale-color($tertiary_color, $lightness: -75%);
+  }
+}
+
+.option_pane {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+
+  background: $tertiary_color;
+  color: $secondary_color;
+
+  font-family: monospace;
+
+  .option_subpanel {
+
+    padding: 5px 30px;
+    margin: 5px;
+    line-height: 30px;
+    border: $secondary_color 2px dashed;
+    border-spacing: 5px;
+
+    text-align: center;
+    table-layout: fixed;
+
+    .option_switch {
+
+      //display: inline-block;
+        font-size: 14pt;
+        padding: 5px 20px;
+        height: 30px;
+        text-align: center;
+
+
+        border: $secondary_color 2px ridge;
+
+        cursor: pointer;
+        &:hover {
+          background: $secondary_color;
+          color: scale-color($tertiary_color, $lightness: 35%);
+        }
+
+        &:active {
+          background: $click_color;
+        }
+    }
+
+    td, th {
+
+      &:hover {
+        color: scale-color($tertiary_color, $lightness: 35%);
+      }
+
+      &:active {
+        background: $click_color;
+      }
+    }
+
+    .active_filter {
+      background: $tertiary_color;
+      color: $primary_color;
+    }
+
+    .passive_filter {
+      background: $primary_color;
+      color: $tertiary_color;
+      border-style: inset;
+      box-shadow: 0 0 1px $secondary_color;
+
+    }
+
+  }
+
+  #stat_options {
+    white-space: nowrap;
+    width: 240px;
+  }
+}
+
+.option_button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  background: $primary_color;
+  color: $tertiary_color;
+  border: $primary_color 2px outset;
+  cursor: pointer;
+
+  border-radius: 100%;
+  padding: 20px;
+
+  &:hover {
+    border-style: inset;
+
+    background: $tertiary_color;
+    color: $primary_color;
+  }
+  &:active {
+    background: $click_color;
+  }
+
+  p {
+
+  }
+}
+
+.option_title {
+  background: scale-color($tertiary-color, $lightness: 5%);
+  border: $primary_color 1px inset;
+
+  padding: 5px 10px;
+  font-size: 12pt;
+}
+
+#head_option_pane {
+
+  margin: 0px 0px 20px;
+  padding: 5px;
+
+  border: $tertiary_color 2px groove;
+
+  #refresh_filters_button {
+    font-size: 32pt;
+
+    margin: 20px 50px;
+
+  }
+
+  #depth_filter {
+
+    tr:hover {
+      background: $secondary_color;
+      color: $tertiary_color;
+
+      cursor: pointer;
+    }
+
+    td, th {
+
+        font-size: 16pt;
+        padding: 2px 5px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+
+        border: $secondary_color 2px ridge;
+    }
+
+  }
+
+  input {
+    //display: block;
+  }
+
+}

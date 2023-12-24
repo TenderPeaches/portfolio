@@ -1,0 +1,41 @@
+body {
+    background: $primary_color;   
+}
+
+#content {
+    background: $primary_color;
+    
+    padding: 0px;
+    margin: $header_height 0px 0px;   
+}
+
+.article {
+    position: relative;
+    
+    margin: 50px 0;
+    padding: 100px 75px;
+    background: scale-color($background_color, $lightness: 75%);
+    
+    box-shadow: 0px 0px 35px 35px $primary_color inset;
+    
+    &:hover {
+        background: $tertiary_color;
+        color: $secondary_color;
+        
+        //box-shadow: 0px 0px 35px 35px scale-color($background-color, $lightness: 75%) inset;
+        box-shadow: 0px 0px 35px 35px $primary_color inset;
+        
+        cursor: pointer;
+        }   
+}
+
+.cover {
+    position: relative;
+    display: inline-block;
+    
+    background-size: contain;
+    height: 100px;
+    width: 25%;
+    
+    background: aqua;   
+}

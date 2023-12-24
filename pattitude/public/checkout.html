@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <title>Confirmation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/checkout.css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    	<script src="js/jquery.js"></script>
+    </head>
+    <body>
+    	<div id="page_header">
+        		<div id="language_panel"><span id="english"><a href="en/index.html">English</a></span></div>
+	            <a href="index.html" id="header_logo"><img src="img/MainLogo.png"></a>
+	            <div id="contact_info"><p id="contact_label">Pour nous joindre: </p><p>514-220-0686</p><a href="mailto:info@pattitude.ca" id="email_link">info@pattitude.ca</a>
+	            	<a href="http://facebook.com/pattitudemtl" id="fb_link"></a>
+	            </div>
+        	<div id="navbar">
+        		<a class="header_link" href="index.html">Accueil</a>
+        		<a class="header_link" href="pricing.html">Tarifs</a>
+        		<a class="header_link" href="order.html">Réserver</a>
+        		<a class="header_link" href="faq.html">FAQ</a>
+        		<a class="header_link" href="about.html">À Propos</a>
+	        </div>
+        </div>
+
+        <div id="content">
+        	
+        	<div id="order_display">
+        		<p>Services commandés</p>
+        	</div>
+        	
+			<div id="meet_greet">
+				<p>Si vous n'avez jamais fait affaire avec nous, nous devons créer votre dossier au moyen d'une rencontre préliminaire. Gratuite, celle-ci se déroule en compagnie de vous et votre ou vos chiens. Une fois les questions mutuellement répondues, vous pouvez confirmer la transaction en fournissant la clé des lieux; il vous sera alors possible de soumettre et payer vos commandes en ligne.</p>
+				<p>Nous sommes disponibles de 8h à 21h, 7 jours sur 7. Contactez-nous pour prendre rendez-vous par <a href="info@pattitude.ca">courriel</a>, <a href="http://facebook.com/pattitudemtl">Facebook</a> ou par téléphone au 514-220-0686.</p>
+			</div>	
+        	
+        	<form id="sign_in_form">
+        		<div class="tab_container">
+        			<div id="login_tab">Connexion</div><div id="signup_tab">Inscription</div>
+        		</div>
+        		<div class="field">
+	        		<label id="username_label">Nom d'Utilisateur</label><br/>
+	        		<input id="in_username" maxlength="24" type="text">
+        		</div>
+        		<div class="field">
+        			<label id="password_label">Mot de Passe</label><br/>
+        			<input id="in_password" maxlength="64" type="password">
+        		</div>
+        		<div id="password_confirm_field" class="field">
+        			<label id="password_confirm_label">Confirmer le Mot de Passe</label>
+        			<input id="in_password_confirm" type="password">
+        		</div>
+        		<div id="email_field" class="field">
+        			<label id="email_label">Adresse Courriel</label>
+        			<input id="in_email" type="text" maxlength="40" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        		</div>
+        		
+        		<input id="login" value="Confirmer" type="submit">
+        		<input id="signup" value="Confirmer" type="submit">
+        	</form>
+        	<div id="logout">Déconnexion</div>
+        	
+        </div>
+        
+        <script type="text/javascript" src="js/checkout.js"></script>
+    </body>
+</html>

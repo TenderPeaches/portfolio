@@ -1,0 +1,36 @@
+%button {
+    position: relative;
+   
+    width: 200px;
+    padding: 10px 0;
+   
+    background: $primary_color;
+    color: $secondary_color;   
+    
+    border: {
+        width: 2px;
+        style: outset;
+        color: $primary_color;    
+        radius: 16px 4px;
+    }   
+    
+    font-family: $font_family;
+    font-size: 12pt;
+    text-align: center;
+    
+    box-shadow: 0 0 2px $primary_color;
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: $tertiary_color; 
+        box-shadow: 0 0 5px $tertiary_color;  
+    }
+    
+    &:disabled {
+        background: $disabled_color;
+        cursor: default;   
+    }
+    
+}

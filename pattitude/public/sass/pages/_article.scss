@@ -1,0 +1,243 @@
+
+
+
+#content {
+  border-radius: 96px;
+}
+
+%link {
+  border-radius: 2px 8px;
+  text-decoration: none;
+
+  border-width: 1px;
+  border-style: solid;
+}
+
+a {
+
+  font-weight: 900;
+  padding: 2px;
+
+  border-radius: 4px;
+  border: scale-color($primary_color, $lightness: 55%) 1px none;
+
+  &:link {
+    background: scale-color($primary_color, $alpha: -60%) ;
+    color: scale-color($primary_color, $lightness: 55%) ;
+  }
+
+  &:visited {
+    background: scale-color($tertiary_color, $alpha: -60%) ;
+    color: scale-color($tertiary_color, $lightness: 25%) ;
+  }
+
+  &:hover {
+    background: scale-color($secondary_color, $alpha: -60%) ;
+    color: scale-color($secondary_color, $lightness: 25%) ;
+  }
+}
+
+.quote {
+    text-align: center;
+}
+
+.quote_text {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.quote_author {
+  text-align: right;
+  padding-right: 15%;
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+
+  }
+}
+
+.dark_quote_author {
+  @extend .quote_author;
+
+  & > a {
+    @extend %link;
+
+        &:link {
+          background: scale-color($tertiary_color, $alpha: -50%, $lightness: 75%);
+          color: scale-color($tertiary_color, $lightness: -5%);
+          border-color: scale-color($tertiary_color, $lightness: -15%);
+        }
+        &:visited {
+          background: scale-color($secondary_color, $alpha: -60%);
+          color: scale-color($primary_color, $lightness: -25%);
+          border-color: scale-color($primary_color, $lightness: -25%);
+        }
+
+        &:hover {
+          background: scale-color($secondary_color, $alpha: -80%);
+          color: scale-color($secondary_color, $lightness: -0%);
+          border-color: $secondary_color;
+        }
+
+  }
+
+}
+
+%bubble {
+  padding: $padding_large;//2.5% 5% 2.5% 5%;
+
+  font-size: 18px;
+  border-radius: $border_radius_large;
+  line-height: 1.5em;
+
+  margin: 20px 10px;
+}
+
+
+.study_list {
+  @extend %bubble;
+
+  background: scale-color($tertiary_color, $lightness: 85%);
+  color: scale-color($tertiary_color, $lightness: -15%);
+  border: scale-color($tertiary_color, $lightness: -15%) 2px solid;
+
+  a {
+    @extend %link;
+
+    &:link {
+      background: scale-color($quebec_color, $alpha: -25%, $lightness: 80%);
+      color: scale-color($quebec_color, $lightness: 25%);
+      border-color: scale-color($quebec_color, $lightness: -15%);
+    }
+    &:visited {
+      background: scale-color($tertiary_color, $alpha: -60%, $lightness: 65%);
+      color: scale-color($tertiary_color, $lightness: -25%);
+      border-color: scale-color($tertiary_color, $lightness: -25%);
+    }
+
+    &:hover {
+      background: scale-color($secondary_color, $alpha: -50%, $lightness: -50%);
+      color: scale-color($secondary_color, $lightness: 35%);
+      border-color: scale-color($secondary_color, $lightness: 35%);
+    }
+  }
+
+  & > li {
+    background: scale-color($tertiary_color, $lightness: 75%);
+    border: scale-color($tertiary_color, $lightness: -15%) 1px solid;
+    padding: $padding_large;
+    border-radius: $border_radius_large;
+
+    margin: 20px 10px;
+  }
+}
+
+.study_detail {
+
+  padding: 5px 20px 0;
+
+  & > li {
+    padding: 5px 0;
+  }
+}
+
+
+.study_conclusions, .study_recommendations, .complementary_resource {
+  border-radius: $border_radius_large;
+  padding: $padding_large;
+  margin: 20px 0;
+  background: scale-color($tertiary_color, $lightness: 69%);
+  border: scale-color($tertiary_color, $lightness: -15%) 1px dashed;
+
+  font-weight: 900;
+
+  li {
+      font-weight: 500;
+  }
+
+  & > ol > li {
+    padding: 10px 0;
+  }
+
+  p {
+    font-weight: 500;
+  }
+}
+
+.our_word {
+  @extend %bubble;
+
+  background: scale-color($primary_color, $lightness: 85%);
+  color: scale-color($primary_color, $lightness: -15%);
+
+  border: $primary_color 2px solid;
+
+  a {
+    @extend %link;
+
+    &:link {
+      background: scale-color($tertiary_color, $alpha: -50%, $lightness: 75%);
+      color: scale-color($tertiary_color, $lightness: -5%);
+      border-color: scale-color($tertiary_color, $lightness: -15%);
+    }
+    &:visited {
+      background: scale-color($primary_color, $alpha: -60%);
+      color: scale-color($primary_color, $lightness: -25%);
+      border-color: scale-color($primary_color, $lightness: -25%);
+    }
+
+    &:hover {
+      background: scale-color($secondary_color, $alpha: -80%);
+      color: scale-color($secondary_color, $lightness: -15%);
+      border-color: scale-color($secondary_color, $lightness: -15%);
+    }
+  }
+}
+
+.qc_overview {
+  @extend %bubble;
+
+  background: scale-color($quebec_color, $lightness: 85%);
+  color: scale-color($quebec_color, $lightness: -15%);
+
+  border: $quebec_color 2px solid;
+
+  a {
+    @extend %link;
+
+    &:link {
+      background: scale-color($tertiary_color, $alpha: -50%, $lightness: 75%);
+      color: scale-color($tertiary_color, $lightness: -5%);
+      border-color: scale-color($tertiary_color, $lightness: -15%);
+    }
+    &:visited {
+      background: scale-color($quebec_color, $alpha: -60%, $lightness: 35%);
+      color: scale-color($quebec_color, $lightness: -25%);
+      border-color: scale-color($quebec_color, $lightness: -25%);
+    }
+
+    &:hover {
+      background: scale-color($secondary_color, $alpha: -80%);
+      color: scale-color($secondary_color, $lightness: -15%);
+      border-color: scale-color($secondary_color, $lightness: -15%);
+    }
+
+  }
+
+}
+.ackschually {
+  @extend %bubble;
+  background: scale-color($wrong_color, $lightness: 95%);
+  border: scale-color($wrong_color, $lightness: 25%) 2px solid;
+  color: scale-color($wrong_color, $lightness: 25%);
+
+  a {
+    &:visited {
+      background: scale-color($wrong_color, $alpha: -60%, $lightness: 65%);
+      color: scale-color($wrong_color, $lightness: -25%);
+      border-color: scale-color($wrong_color, $lightness: -25%);
+    }
+  }
+}

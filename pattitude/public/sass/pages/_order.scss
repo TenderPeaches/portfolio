@@ -1,0 +1,416 @@
+$form_width: 800px;
+
+#order_form {
+    position: relative;   
+}
+#in_zip {
+    position: relative;
+    
+    width: 48px;
+    margin: 15px 0 30px 5px;
+    padding: 2px 0 2px 2px;   
+}
+
+#walk_form, #petsit_form {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: $form_width;
+        padding: 50px 10px 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;
+        padding: 10px 2px;
+    }
+    
+    border: {
+        width: 2px;
+        style: solid;
+        color: $background_color;   
+        radius: 16px 4px;
+    }
+    
+    background: scale-color($background_color, $lightness: 50%);
+}
+
+#petsit_form {
+    display: none;   
+}
+
+%dynamic_form {
+    text-align: center;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        padding: 0 40px 20px;
+        margin: 0 0 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        padding: 0 2px 5px;
+        margin: 0 0 5px;
+    }
+    
+    border: {
+        style: solid;
+        width: 2px;
+        color: scale-color($primary_color, $lightness: 50%);
+        radius: 16px 4px;  
+    }
+    
+    background: scale-color($background_color, $lightness: 75%);
+}
+
+#single_form {
+    @extend %dynamic_form;
+}
+
+#recurring_form {
+    @extend %dynamic_form;
+    
+    display: none;
+}
+
+.tab_container {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: $form_width;
+        height: 44px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;
+    }
+    line-height: 40px;
+    
+    background: scale-color($background_color, $lightness: 50%);
+    
+    font: {
+        size: 14pt;   
+    }
+}
+
+.tab {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        display: inline-block;
+        width: $form_width / 2 - 40px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        display: block;
+    }
+ 
+    margin: 0px 8px;
+ 
+    background: $primary_color;
+    color: $secondary_color;
+    
+    border: {
+        radius: 16px 4px;
+        width: 2px;
+        color: $background_color;
+        style: solid;
+    }
+    
+    box-shadow: -2px -2px 2px scale-color($primary_color, $lightness: 50%);
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);
+    }
+}
+
+
+#item_type {
+    background: scale-color($background_color, $lightness: 25%);   
+}
+
+#in_date_single {
+    position: relative;
+}
+
+#recurring_dates {
+    position: relative;
+    display: inline-block;
+    
+    width: 220px;   
+    line-height: 34px;
+
+    text-align: left;    
+}
+
+#recurring_dates input {
+    display: inline-block;
+    
+    width: 100px;
+}
+
+#recurring_dates label {
+    position: relative;
+    display: inline-block;
+    
+    width: 110px;
+       
+}
+
+input {
+    font: {
+        family: $font_family;
+        size: 14pt;    
+    }
+    
+    text-align: center;
+}
+
+#duration_radio {
+    position: relative;
+    display: inline-block;
+    
+    top: 12px;
+    
+    margin: 20px 0 30px;
+    
+    text-align: left;   
+}
+
+
+#in_start_hour, #in_end_hour, #in_time_early, #in_time_late {
+    width: 30px;   
+}
+
+#in_start_date, #in_end_date, #in_petsit_date {
+    width: 80px;   
+}
+
+#pet_stop_form {
+    @extend %dynamic_form;   
+    
+    padding: 20px 40px;
+}
+
+#overnight_form {
+    @extend %dynamic_form;
+    
+    display: none;   
+    
+    padding: 20px 40px;
+}
+
+#overnight_options {
+    display: inline-block;
+    position: relative;
+    
+    margin: 0 auto;
+    text-align: left;
+}
+
+#overnight_form input {
+    display: inline-block;
+    
+    margin: 10px;   
+}
+
+#in_petsit_date {
+    position: relative;
+    display: inline-block;
+    
+    margin: 0 0 30px;   
+}
+
+#add_item_button {
+    @extend %button;
+    display: inline-block;
+    
+    
+}
+
+#remove_item_button {
+    @extend %button;
+    display: inline-block;
+}
+
+#cart_section {
+    position: relative;
+    margin: 20px 0 20px;
+
+    text-align: center;   
+}
+
+#cart_display {
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        display: inline-block;
+        padding: 5px 60px;
+        margin: 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        display: block;
+        padding: 5px;
+        margin: 5px 0;
+    }
+    
+    background: scale-color($background-color, $lightness: 50%);
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+}
+
+%item_header {
+    
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        padding: 8px 60px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        padding: 4px;
+    }
+    margin: 8px 0;
+    
+    font-size: 14pt;
+    
+    border: {
+        width: 1px;
+        style: outset;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+    
+    cursor: pointer;
+    background: scale-color($background-color, $lightness: 82.5%);
+    
+    &:nth-child(2n) {
+        background: scale-color($background-color, $lightness: 70%);   
+    }
+    
+    &:hover {
+        box-shadow: 0 0 2px $primary_color;
+        border-style: inset;
+    }
+}
+
+.walk_header, .petsit_header {
+    @extend %item_header;
+}
+
+#selected_header {
+    background: $tertiary_color;
+    color: $secondary_color;
+    box-shadow: 0 0 5px $tertiary_color;   
+}
+
+#estimate {
+    position: relative;
+    display: inline-block;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 80%;
+        padding: 20px 20px;
+        margin: 0 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 96%;
+        padding: 5px;
+    }
+    background: scale-color($background-color, $lightness: 80%);
+    
+    border: {
+        width: 2px;
+        style: inset;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+    
+    font: {
+        size: 16pt;
+        }   
+}
+
+#login_reminder {
+    font-style: italic;   
+}
+
+#order_submit {
+    @extend %button;
+    
+    margin: 10px 0;
+}
+
+#first_time_order {
+    
+}
+
+#first_time_text, #order_comments {
+    position: relative;
+    
+    width: 90%;
+    height: 100px;   
+    
+    resize: none;
+}
+
+#first_time_submit {
+    @extend %button;
+    display: inline-block;
+    
+    margin: 10px;   
+}
+
+#comments_label {
+    position: relative;
+    display: inline-block;
+    
+    padding: 10px 20px;
+    border-radius: 16px 4px;
+    
+    background: scale-color($background_color, $lightness: 75%);   
+}
+
+#customer_info {
+    position: relative;
+    text-align: center;
+    
+    margin: 10px 50px;
+    padding: 20px;
+      
+}
+
+#customer_info label {
+    display: block;   
+    position: relative;
+    
+}
+
+#in_client_name, #in_client_contact {
+    display: inline-block;
+    position: relative;
+    
+    margin: 10px;
+    width: 90%;   
+}

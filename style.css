@@ -1,0 +1,148 @@
+:root {
+    
+    /* primary color */
+    /** used for default backgrounds */
+    --color-primary-white: hsl(243, 100%, 91%);
+    --color-primary-lightest: hsl(243, 100%, 80%);
+    --color-primary-lighter: hsl(243, 100%, 69%);
+    --color-primary-light: hsl(243, 100%, 58%);
+    --color-primary: hsl(243, 100%, 50%);
+    --color-primary-dark: hsl(243, 100%, 36%);
+    --color-primary-darker: hsl(243, 100%, 23%);
+    --color-primary-darkest: hsl(243, 100%, 11%);
+    --color-primary-black: hsl(243, 100%, 5%);
+
+    /* secondary color */
+    /** used for default foregrounds */
+    --color-secondary-white: hsl(18, 89%, 91%);
+    --color-secondary-lightest: hsl(18, 89%, 80%);
+    --color-secondary-lighter: hsl(18, 89%, 69%);
+    --color-secondary-light: hsl(18, 89%, 58%);
+    --color-secondary: hsl(18, 89%, 48%);
+    --color-secondary-dark: hsl(18, 89%, 36%);
+    --color-secondary-darker: hsl(18, 89%, 23%);
+    --color-secondary-darkest: hsl(18, 89%, 11%);
+    --color-secondary-black: hsl(18, 89%, 5%);
+
+    /* accent color */
+    /** used to clash with the primary colors */
+    --color-accent-white: hsl(80, 97%, 91%);
+    --color-accent-lightest: hsl(80, 97%, 80%);
+    --color-accent-lighter: hsl(80, 97%, 69%);
+    --color-accent-light: hsl(80, 97%, 58%);
+    --color-accent: hsl(80, 97%, 60%);
+    --color-accent-dark: hsl(80, 97%, 36%);
+    --color-accent-darker: hsl(80, 97%, 23%);
+    --color-accent-darkest: hsl(80, 97%, 11%);
+    --color-accent-black: hsl(80, 97%, 5%);
+
+    /* generic utility colors */
+    --color-success: hsl(130, 100%, 35%);
+    --color-error: hsl(0, 100%, 35%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-pattitude-background: hsl(118, 33%, 35%);
+    --color-pattitude-foreground: hsl(118, 33%, 75%);
+
+    --color-fantasea-background: hsl(195, 100%, 45%);
+    --color-fantasea-foreground: hsl(195, 100%, 85%);
+
+    --color-custard-commercial-background: hsl(41, 100%, 40%);
+    --color-custard-commercial-foreground: hsl(41, 100%, 85%);
+
+    --color-custard-energy-background: hsl(30, 71%, 80%);
+    --color-custard-energy-foreground: hsl(30, 71%, 25%);
+
+    --color-custard-wp-background: hsl(238, 45%, 11%);
+    --color-custard-wp-foreground: hsl(36, 97%, 61%);
+
+    --color-lang-background: hsl(243, 100%, 50%);
+    --color-lang-foreground: hsl(243, 100%, 91%);
+
+    --color-miredo-background: hsl(104, 72%, 23%);
+    --color-miredo-foreground: hsl(104, 72%, 58%);
+
+    --color-projmgr-background: hsl(224, 63%, 68%);    
+    --color-projmgr-foreground: hsl(224, 63%, 18%);
+
+    --color-stop: 75%;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        color: var(--color-white);
+        background: var(--color-primary-black);
+
+        font-family: 'Consolas', 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+
+    a {
+        color: var(--color-white);
+    }
+    .slide {
+        display: grid;
+        padding: 2% 10% 8%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 50px;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide .name {
+        text-align: right;
+    }
+}
+
+.slide--first {
+    background: linear-gradient(var(--color-primary-black) var(--color-stop), var(--color-pattitude-background));
+}
+
+.slide--pattitude {
+    background: linear-gradient(var(--color-pattitude-background) var(--color-stop), var(--color-fantasea-background));
+    color: var(--color-pattitude-foreground);
+}
+
+.slide--fantasea {
+    background: linear-gradient(var(--color-fantasea-background) var(--color-stop), var(--color-custard-commercial-background));
+    color: var(--color-fantasea-foreground);
+}
+
+.slide--custard-commercial {
+    background: linear-gradient(var(--color-custard-commercial-background) var(--color-stop), var(--color-custard-energy-background));
+    color: var(--color-custard-commercial-foreground);
+}
+
+.slide--custard-energy {
+    background: linear-gradient(var(--color-custard-energy-background) var(--color-stop), var(--color-custard-wp-background));
+    color: var(--color-custard-energy-foreground);
+}
+
+.slide--custard-wp {
+    background: linear-gradient(var(--color-custard-wp-background) var(--color-stop), var(--color-miredo-background));
+    color: var(--color-custard-wp-foreground);
+}
+
+.slide--miredo {
+    background: linear-gradient(var(--color-miredo-background) var(--color-stop), var(--color-lang-background));
+    color: var(--color-miredo-foreground);
+}
+
+.slide--lang {
+    background: linear-gradient(var(--color-lang-background) var(--color-stop), var(--color-projmgr-background));
+    color: var(--color-lang-foreground);
+}
+
+.slide--projmgr {
+    background: linear-gradient(var(--color-projmgr-background) var(--color-stop), var(--color-primary-black));
+    color: var(--color-projmgr-foreground);
+}

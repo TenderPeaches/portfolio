@@ -1,0 +1,32 @@
+#content {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        margin: $header_height 100px 0;
+        padding: 40px 120px;
+    }
+
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    text-align: center;
+
+    background: scale-color($background-color, $lightness: 25%);
+}
+
+#content #title {
+    font-size: 26pt;
+    font-weight: 800;
+}
+
+#content ul {
+
+    margin: 0 10%;
+
+    text-align: left;
+}

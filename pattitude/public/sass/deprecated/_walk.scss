@@ -1,0 +1,290 @@
+$form_width: 800px;
+
+#in_zip {
+    position: relative;
+    
+    width: 48px;
+    margin: 15px 0 30px 5px;
+    padding: 2px 0 2px 2px;   
+}
+
+#walk_form {
+    position: relative;
+    
+    width: $form_width;
+    
+    border-radius: 16px 4px;
+    
+    background: scale-color($background_color, $lightness: 50%);
+}
+
+%dynamic_form {
+    text-align: center;
+    
+    padding: 0 40px 20px;
+    margin: 0 0 20px;
+    
+    border: {
+        style: solid;
+        width: 2px;
+        color: scale-color($primary_color, $lightness: 50%);
+        radius: 16px 4px;  
+    }
+    
+    background: scale-color($background_color, $lightness: 75%);
+}
+
+#single_form {
+    @extend %dynamic_form;
+}
+
+#recurring_form {
+    @extend %dynamic_form;
+    
+    display: none;
+}
+
+.tab_container {
+    position: relative;
+    
+    width: $form_width;
+    height: 44px;
+    line-height: 40px;
+    
+    background: scale-color($background_color, $lightness: 50%);
+    
+    font: {
+        size: 14pt;   
+    }
+}
+
+%form_tab {
+    position: relative;
+    display: inline-block;
+    
+ 
+    width: $form_width / 2 - 40px;
+    margin: 0px 8px;
+ 
+    background: $primary_color;
+    color: $secondary_color;
+    
+    border: {
+        radius: 16px 4px;
+        width: 2px;
+        color: $background_color;
+        style: solid;
+    }
+    
+    box-shadow: -2px -2px 2px scale-color($primary_color, $lightness: 50%);
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);
+    }
+}
+
+#single_tab {
+    @extend %form_tab;
+}
+
+#recurring_tab {
+    @extend %form_tab;
+}
+
+
+#in_date_single {
+    position: relative;
+}
+
+#recurring_dates {
+    position: relative;
+    display: inline-block;
+    
+    width: 220px;   
+    line-height: 34px;
+
+    text-align: left;    
+}
+
+#recurring_dates input {
+    display: inline-block;
+    
+    width: 100px;
+}
+
+#recurring_dates label {
+    position: relative;
+    display: inline-block;
+    
+    width: 110px;
+       
+}
+
+#label_time input {
+    width: 30px;   
+}
+
+input {
+    font: {
+        family: $font_family;
+        size: 14pt;    
+    }
+    
+    text-align: center;
+}
+
+#duration_radio {
+    position: relative;
+    display: inline-block;
+    
+    top: 12px;
+    
+    margin: 20px 0 30px;
+    
+    text-align: left;   
+}
+
+#add_walk_button {
+    @extend %button;
+    position: absolute;
+    display: inline-block;
+    
+    left: $form_width / 8;
+    top: 25px;
+    
+}
+
+#remove_walk_button {
+    @extend %button;
+    position: absolute;
+    
+    left: $form_width / 8;
+    top: 85px;
+    
+}
+
+#walk_cart_section {
+    position: relative;
+    
+    height: 140px;
+    margin: 20px 0 40px;
+
+    text-align: left;   
+}
+
+#walk_cart {
+    position: absolute;
+    display: inline-block;
+    
+    left: $form_width / 2 - 90px;
+    
+    width: $form_width / 2;
+    height: 145px;
+    padding: 5px 15px 5px 20px;
+    margin: 0 40px;
+    
+    background: scale-color($background-color, $lightness: 75%);
+    
+    border: {
+        width: 1px;
+        style: solid;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+}
+
+.walk_header {
+    position: relative;
+    
+    margin: 4px 0;
+    padding: 2px 10px;
+    
+    border: {
+        radius: 4px;   
+    }
+    
+    cursor: pointer;
+    background: scale-color($background-color, $lightness: 50%);
+    
+    &:nth-child(2n) {
+        background: scale-color($background-color, $lightness: 25%);   
+    }
+    
+    &:hover {
+        box-shadow: 0 0 2px $primary_color;
+    }
+}
+
+#selected_header {
+    background: $tertiary_color;
+    color: $secondary_color;
+    box-shadow: 0 0 5px $tertiary_color;   
+}
+
+%nav_arrow {
+    position: absolute;
+    
+    top: 50px;
+    z-index: 1;
+    
+    font: {
+        size: 32pt;   
+    }
+    
+    text-shadow: 0 0 2px $primary_color;
+    
+    cursor: pointer;
+    
+    &:hover {
+        color: $tertiary_color;
+        text-shadow: 0 0 5px $tertiary_color;   
+    }
+}
+
+#next_cart_page {
+    @extend %nav_arrow;
+    
+    right: -12px;   
+}
+
+#prev_cart_page {
+    @extend %nav_arrow;
+    
+    right: $form_width / 2 + 55px;   
+}
+
+#walk_estimate {
+    position: relative;
+    display: inline-block;
+    
+    background: scale-color($background-color, $lightness: 80%);
+    
+    border: {
+        width: 2px;
+        style: inset;
+        color: $primary_color;
+        radius: 16px 4px;   
+    }
+    
+    width: 80%;
+    padding: 20px 20px;
+    margin: 0 20px;
+    
+    font: {
+        size: 16pt;
+        }   
+}
+
+#walk_login_reminder {
+    font-style: italic;   
+}
+
+#walk_submit {
+    @extend %button;
+    
+    margin: 10px 0;
+    
+}

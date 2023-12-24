@@ -1,0 +1,10 @@
+Categories include but are not limited to stats; They also include data like the player's unique ID, his name, age, team, etc.
+
+Not all categories are in use at any given time and so there are two sets of categories:
+  1) tableMgr.categories, the set of categories displayed on the players' table
+  2) player.categories, the set of properties of the Player object loaded in from the JSON at the beginning of the session; this set of categories is more inflexible and can only be durably modified in the exportDB.js subroutines; Methods must ensure that whenever a Player object's properties are being looped on, they keep the categories synced with tableMgr.categories
+
+&New Category Protocol
+
+#1 Add header (index.html)
+#2 Add/Adjust subheader (index.html)

@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 50px;
+    
+    font-family: 'century gothic', arial;   
+}
+
+img {
+    position: relative;
+    
+    float: right;
+    width: 300px;   
+}
+
+h1 {
+    text-align: center;   
+}
+
+#invoice_info {
+    position: relative;
+    
+    float: right;   
+}
+
+#items {
+    position: relative;
+    display: inline-block;
+    
+    padding: 10px;
+    
+    text-align: right;
+    
+    border-collapse: collapse;
+}
+
+#items th, #items td {
+    border: {
+        width: 1px;
+        style: solid;
+        color: #888;   
+    }
+    
+    padding: 5px;
+}
+
+#invoice {
+    margin: 30px 0;
+    
+    text-align: center;
+}
+
+#header_row th {
+    padding: 5px 25px;
+    
+    text-align: center;
+    
+    background: #ddd;
+}
+
+#product_header {
+    width: 400px;
+}
+
+#quantity_header {
+    width: 80px;
+}
+
+#price_header, #total_price_header {
+    width: 120px;   
+}
+
+.item {
+    &:nth-of-type(2n) {
+        background: #eee;
+        }
+        
+    text-align: left;
+}
+
+.item:nth-child(5n + 1), .item:nth-child(5n + 2) {
+     //text-align: center;
+}

@@ -1,0 +1,28 @@
+@import 'header';
+body {
+  background: scale-color($primary_color, $lightness: -25%);
+}
+#content {
+  position: relative;
+  // Display for desktop
+  @media only screen and (min-width: $desktop_min_width) {
+      margin: $header_height 100px 0;
+      padding: 40px 120px;
+  }
+
+  // Display for mobile
+  @media only screen and (max-width: $mobile_max_width)
+   {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+
+  text-align: justify;
+
+  background: scale-color($primary_color, $lightness: 50%);
+  color: scale-color($primary_color, $lightness: -80%);
+
+
+
+}

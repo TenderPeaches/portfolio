@@ -1,0 +1,450 @@
+:root {
+	font-size: 14pt;
+
+	--brand-color: hsl(53, 84%, 58.4%);
+	--banner-color: hsla(198, 8.8%, 22.4%, 53%);
+	--content-color: hsla(198, 8.8%, 22.4%, 37%);
+	--text-color: hsl(0, 0%, 100%);
+
+	--content-width: 960px;
+}
+
+
+@font-face {
+	font-family: Custard; src: url('fonts/gsl.ttf');
+}
+
+@font-face {
+	font-family: Text; src: url('fonts/hkg.otf');
+}
+
+body {
+	text-align: center;
+	color: var(--text-color);
+	font-family: Text;
+	background: url("img/custard.jpg") no-repeat 50% 0%;
+	background-color: var(--brand-color);
+	background-size: cover;
+	margin: 0;
+}
+
+a, a:visited {
+	color: var(--brand-color);
+}
+
+.lang__container {
+	position: absolute;
+	display: flex;
+	font-weight: 800;
+	align-content: center;
+	vertical-align: middle;
+}
+
+.lang__separator {
+	position: relative;
+	top: -0.1em;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+}
+
+.lang__object > a {
+	text-decoration: none;
+}
+
+.lang__flag {
+	position: relative;
+	top: 0.1em;
+	height: 1em;
+}
+
+.flower {
+	display: none;
+}
+
+.flower__contact {
+	display: none;
+}
+
+@media (min-width: 720px) { 
+	.flower {
+		display: block;
+		position: relative;
+		padding: 1em 5%;
+		max-width: var(--content-width);
+		text-align: center;
+		background: var(--content-color);
+		margin: auto;
+	}
+
+	.flower__lang-selector {
+		text-align: left;
+		left: 2%;
+	}
+
+	.flower__kernel {
+		margin: 7em 5em 2em;
+	}
+
+	.flower__kernel-header {
+		font-family: Custard, Arial;
+		font-size: 64pt;
+		color: var(--brand-color);
+		margin: 0;
+	}
+
+	.flower__petal {
+		padding: 0.25em;
+		text-align: center;
+	}
+
+	.flower__petal-header {
+		font-size: 1rem;
+		margin: 0.5em;
+	}
+
+	.flower__petal--top-left {
+		position: absolute;
+		width: 25%;
+		left: 7.5%;
+		top: 16%;
+	}
+
+	.flower__petal--top-right {
+		position: absolute;
+		width: 25%;
+		right: 7.5%;
+		top: 16%;
+	}
+
+	.flower__petal--bottom-left {
+		position: absolute;
+		width: 25%;
+		left: 7.5%;
+		top: 52%;
+	}
+
+	.flower__petal--bottom-right {
+		position: absolute;
+		width: 25%;
+		right: 7.5%;
+		top: 52%;
+	}
+
+	.flower__petal-img {
+		width: 96px;
+		margin: 0.5em;
+	}
+
+	.flower__petal-content {
+		font-size: 12pt;
+		display: flex;
+		justify-content: center;
+		white-space: nowrap;
+		overflow: visible;
+	}
+	
+	.flower__petal:last-child {
+		margin: 7em 2em 0em;
+	}
+
+	.flower__contact {
+		display: block;
+		position: absolute;
+		right: 2%;
+		text-decoration: underline transparent;
+		font-weight: 800;
+	}
+
+	.flower__contact:hover {
+		text-decoration: underline var(--brand-color);
+	}
+
+	.flower__contact,
+	.flower__contact:hover {
+		transition: all 0.25s;
+	}
+}
+
+.content {
+	display: inline-block;
+	position: relative;
+	background: var(--content-color);
+	text-align: justify;	
+	padding: 1em;
+	margin: 2em 0.5em;
+	max-width: var(--content-width);
+}
+
+.content__header {
+	color: var(--brand-color);
+	font-family: Custard, Arial;
+	font-size: 5.95rem;
+	text-align: center;
+	margin: 0;
+}
+
+.content__lang-selector {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 720px) {
+	.content {
+		display: block;
+		position: relative;
+		padding: 1em 5%;
+		margin: 2em auto;
+		text-align: justify;
+		max-width: min(calc(100vw - (5%)), 960px);
+	}
+
+	.content__header {
+		display: none;
+	}
+
+	.content__lang-selector {
+		display: none;
+
+	}
+}
+
+.who {
+
+}
+
+.who__content {
+}
+
+.who__content a {
+	text-decoration: none;
+	font-weight: 800;
+}
+
+.who__content a {
+	text-decoration: underline;
+}
+
+.who__header {
+	font-size: 1.57rem;
+	margin: 0.5em;
+	text-align: center;
+}
+
+.who__subheader {
+	margin: 1em 0;
+	text-align: center;
+}
+
+
+@media (min-width: 720px) {
+	.who__content {
+		margin: 0.5em;
+		padding: 1em 3em;
+	}
+
+	.who__subheader {
+		text-align: justify
+	}
+}
+
+.what__content {
+
+}
+
+.what__object {
+	text-align: center;
+	padding: 0.5em;
+	margin: 0.5em 0;
+}
+
+.what__header {
+	font-size: 1.57rem;
+	margin: 0.5em;
+	text-align: center;
+}
+
+.what__icon {
+	display: inline-block;
+	text-align: center;
+	width: 128px;
+}
+
+.what__text {
+	text-align: justify;
+}
+
+.what__subheader {
+	text-align: center;
+}
+
+@media (min-width: 720px) {
+	.what__content {
+		padding: 1em;
+	}
+
+	.what__object {
+		display: flex;
+	}
+
+	.what__icon {
+		display: inline-block;
+		flex: 1;
+		margin-right: 5em;
+		margin-top: 1.5em;
+		max-width: 128px;
+		max-height: 128px;
+		align-self: center;
+	}
+
+	.what__icon--short-text {
+		margin-top: 0.5em;
+	}
+
+	.what__subheader {
+		text-align: justify;
+		margin-top: 0em;
+		margin-bottom: 0.5em;
+	}
+
+	.what__text {
+		width: 75%;
+		flex: 4;
+		text-align: justify;
+	}
+}
+
+.what-not__content {
+
+}
+
+.what-not__header {
+	font-size: 1.57rem;
+	margin: 1em;
+	text-align: center;
+}
+
+.what-not__text {
+	text-align: justify;
+	margin-bottom: 2em;
+}
+
+.what-not__display {
+	width: 100%;
+	text-align: center;
+}
+
+.what-not__object {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.what-not__icon {
+	display: inline-block;
+	width: 128px;
+	margin: 0 4em;
+}
+
+@media (min-width: 720px) {
+	.what-not__content {
+		padding: 1em;
+		text-align: center;
+	}
+
+	.what-not__text {
+		margin: 0.5em;
+		padding: 1em 3em;
+	}
+
+	.what-not__display {
+		display: flex;
+	}
+
+	.what-not__object {
+		flex: 1;
+	}
+
+	.what-not__icon {
+
+	}
+}
+
+.wordcloud {
+	display: inline-block;
+	position: absolute;
+	width: 80%;
+	left: 10%;
+}
+
+.footer {
+	position: relative;
+	display: inline-block;
+	left: 10%;
+	max-width: 80%;
+	margin: 14% auto 0 auto;
+	text-align: justify;
+}
+
+.footer__hook {
+	text-align: center;
+	margin: -1em 0 1em;
+	font-weight: 700;
+	font-size: 48pt;
+	text-shadow: 1px 1px 1px var(--text-color);
+}
+
+@media (min-width: 720px) {
+	.footer__hook {
+		margin-top: 0;
+		margin-bottom: 35%;
+	}
+}
+
+.coordinates {
+	margin: 1.5em 0 0;
+	padding: 1em 0 0;
+	text-align: center;
+	font-style: normal;
+}
+
+.coordinates__object {
+	display: inline-block;
+}
+
+.coordinates__object > a, .coordinates__object > div {
+	display: inline-block;
+	margin: 0.5em;
+	color: var(--text-color);
+}
+
+.coordinates__object > a:hover {
+	color: var(--brand-color);
+}
+
+.coordinates__object > a,
+.coordinates__object > a:hover {
+	transition: color 0.3s;
+}
+
+.coordinates__object a, .coordinates__object div, .coordinates__object img {
+	vertical-align: middle;
+}
+
+
+.coordinates__object {
+
+}
+
+.coordinates__button {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+.coordinates__button--nolink {
+
+}
+
+

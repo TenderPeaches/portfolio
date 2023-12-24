@@ -1,0 +1,253 @@
+$form_width: 400px;
+
+#sign_in_form {
+    position: relative;
+    
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: $form_width;
+        padding: 0 40px 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        width: 100%;
+        padding: 0 5px 5px;
+    }
+    margin: 0 auto;
+    
+    border-radius: 16px 4px;
+    
+    background: scale-color($background_color, $lightness: 50%);   
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    
+    margin: 4px 0px;
+    
+    font: {
+        size: 12pt;
+        }   
+}
+
+input[type=text], input[type=password] {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: 260px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    padding: 2px 5px;
+    
+    
+    font: {
+        size: 14pt;
+        family: $font_family;
+        }   
+}
+
+#meet_greet {
+    position: relative;
+    
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        padding: 20px 60px;
+        margin: 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        padding: 5px;
+    }
+
+    border: {
+        width: 1px;
+        style: solid;
+        color: $background_color;        
+        radius: 16px 4px;   
+    }
+    
+    background: scale-color($background_color, $lightness: 75%);
+    
+    text-align: justify;   
+}
+
+.tab_container {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        left: -40px;
+        width: $form_width;
+        height: 44px;
+        padding: 0px 40px;
+        margin: 10px 0 20px;
+    
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    line-height: 40px;
+    
+    //background: scale-color($background_color, $lightness: 25%);
+    
+    font: {
+        size: 14pt;   
+    }
+}
+
+%form_tab {
+    position: relative;
+    display: inline-block;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        width: $form_width / 2 - 40px;
+        margin: 0px 8px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+    }
+    
+    background: $primary_color;
+    color: $secondary_color;
+    
+    border: {
+        radius: 16px 4px;
+        width: 2px;
+        color: $background_color;
+        style: solid;
+    }
+    
+    box-shadow: -2px -2px 2px scale-color($primary_color, $lightness: 50%);
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: $tertiary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);
+    }
+}
+
+#login_tab {
+    @extend %form_tab;
+}
+
+#signup_tab {
+    @extend %form_tab;
+}
+
+input[type=submit] {
+    @extend %button;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        margin: 40px 0px 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        margin: 6px 3px;
+    }   
+}
+
+#logout {
+    @extend %button;
+    
+    position: inline-block;
+    display: none;   
+}
+
+#password_confirm_field, #email_field {
+    display: none;   
+}
+
+#signup {
+    display: none;   
+}
+
+#order_display {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+    padding: 10px 50px;
+    margin: 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        padding: 5px 2px;
+        margin: 5px 0px;
+    }
+    
+    border: {
+        width: 1px;
+        style: inset;
+        color: scale-color($background_color, $lightness: -25%);
+        radius: 16px 4px;   
+    }
+    
+    background: scale-color($background_color, $lightness: 50%);    
+}
+
+#order_display p {
+    position: relative;
+    display: inline-block;
+    
+    font-size: 20pt;
+    
+    margin: 5px 0 25px;   
+}
+
+.order_header {
+    position: relative;
+    // Display for desktop
+    @media only screen and (min-width: $desktop_min_width) {
+        margin: 10px 10px;
+        padding: 5px 20px;
+    }    
+    
+    // Display for mobile
+    @media only screen and (max-width: $mobile_max_width)
+     {
+        margin: 4px 0px;
+        padding: 4px;
+    }
+    
+    font-size: 14pt;
+    
+    border: {
+        width: 2px;
+        style: solid;
+        color: $background_color;
+        radius: 8px 2px;   
+    }
+    
+    background: scale-color($background_color, $lightness: 80%);
+    box-shadow: 0 0 2px $primary_color;
+    
+    cursor: pointer;
+    
+    &:nth-child(2n) {
+        background: scale-color($background_color, $lightness: 90%);
+        }   
+        
+    &:hover {
+        background: $tertiary_color;
+        color: $secondary_color;
+        border-color: scale-color($tertiary_color, $lightness: 50%);
+        
+        box-shadow: 0 0 5px $tertiary_color; 
+    }
+}

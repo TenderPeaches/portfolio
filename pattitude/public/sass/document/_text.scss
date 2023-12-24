@@ -1,0 +1,16 @@
+$primary_text_color: $primary_color;
+$font_family: "century gothic", arial;
+
+.down_arrow {
+    display: inline-block;
+    
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    
+    border-top: 5px $primary_text_color solid;
+    border-left: 5px transparent solid;
+    border-right: 5px transparent solid;
+    
+    vertical-align: 3%;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Fanta Sea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="(Fantasy) Hockey Management Tool">
+		<meta name="author" content="Ysaac Quevillon">
+        <link rel="stylesheet" href="css/index.css"/>
+        <!--link rel="icon" href="favicon.ico" type="image/x-icon"/-->
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+      <div id="content">
+        <div class="option_pane" id="head_option_pane">
+          <div id="refresh_filters_button" class="option_button"><p>Refresh</p></div>
+          <div id="depth_filter" class="option_subpanel">
+            <span class="option_title">Pos.Depth</span>
+          <table>
+            <thead></thead>
+            <tbody><tr id="depth_filter_lw_row"><th id="depth_filter_lw_header">LW</th><td id="depth_filter_lw_value"></td></tr><tr id="depth_filter_c_row"><th id="depth_filter_c_header">C</th><td id="depth_filter_c_value"></td></tr><tr id="depth_filter_rw_row"><th id="depth_filter_rw_header">RW</th><td id="depth_filter_rw_value"></td></tr><tr id="depth_filter_f_row"><th id="depth_filter_f_header">F</th><td id="depth_filter_f_value"></td></tr><tr id="depth_filter_d_row"><th id="depth_filter_d_header">D</th><td id="depth_filter_d_value"></td></tr><tr id="depth_filter_g_row"><th id="depth_filter_g_header">G</th><td id="depth_filter_g_value"></td></tr></tbody>
+          </table>
+        </div>
+        <div id="stat_options" class="option_subpanel">
+          <!--div class="option_title">Total &lt;&gt; /GP &lt;&gt; /82GP</div>
+          <div class="option_switch" id="absolutism_switch"></div-->
+        <div id="absolutism_options">
+          <input type="radio" name="absolutism" value="total" id="absolutism_option_total"><label for="absolutism_option_total">Total</label>
+          <input type="radio" name="absolutism" value="perGame" id="absolutism_option_perGame"><label for="absolutism_option_perGame">/ GP</label>
+          <input type="radio" name="absolutism" value="perFullSeason" id="absolutism_option_perFullSeason"><label for="absolutism_option_perFullSeason">/ 82GP</label>
+          <input type="radio" name="absolutism" value="perHour" id="absolutism_option_perHour"><label for="absolutism_option_perHour">/ 60min</label>
+        </div>
+        <div id="cateogry_options">
+          <input type="checkbox" id="show_goals" name="categories_shown" value="goals"><label for="show_goals">Goals</label>
+          <input type="checkbox" id="show_assists" name="categories_shown" value="assists"><label for="show_assists">Assists</label>
+          <input type="checkbox" id="show_points" name="categories_shown" value="points"><label for="show_points">Points</label>
+          <input type="checkbox" id="show_powerPlayPoints" name="categories_shown" value="powerPlayPoints"><label for="show_powerPlayPoints">Powerplay Points</label>
+          <input type="checkbox" id="show_plusMinus" name="categories_shown" value="plusMinus"><label for="show_plusMinus">+/-</label>
+          <input type="checkbox" id="show_shotsOnGoal" name="categories_shown" value="shotsOnGoal "><label for="show_shotsOnGoal">Shots on Goal</label>
+          <input type="checkbox" id="show_hits" name="categories_shown" value="hits"><label for="show_hits">Hits</label>
+          <input type="checkbox" id="show_blockedShots" name="categories_shown" value="blockedShots"><label for="show_blockedShots">Blocked Shots</label>
+        </div>
+
+        </div>
+        <div id="purpose" class="option_subpanel">
+          <input type="radio" name="purpose" value="predraft" id="predraft_tool"><label for="predraft_tool">Pre-Draft</label>
+          <input type="radio" name="purpose" value="draft" id="draft_tool"><label for="draft_tool">Draft</label>
+          <input type="radio" name="purpose" value="season" id="season_tool"><label for="season_tool">In-Season</label>
+        </div>
+        <div id="show_drafted">
+          <input type="checkbox" id="show_drafted_option" name="show_drafted"><label>Show Drafted?</label>
+        </div>
+      </div>
+      <div id="draft_panel">
+        <table id="drafted_team_table">
+          <thead>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+        <table id="players_table">
+          <thead>
+        </thead>
+        <tbody id="player_stats_table"></tbody>
+        </tbody>
+      </table>
+      </div>
+    </body>
+    <script src="js/db/playersJson18.js"></script>
+    <script src="js/db/nhlSchedule18.js"></script>
+    <script src="js/exportDB.js"></script>
+    <script src="js/hockeyMgr.js"></script>
+    <script src="js/analyst.js"></script>
+    <script src="js/tableMgr.js"></script>
+    <script src="js/draftMgr.js"></script>
+</html>

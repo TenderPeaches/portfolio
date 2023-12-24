@@ -1,0 +1,51 @@
+
+// Colors
+$primary_color: #c6f1ff;
+$secondary_color: scale-color($primary_color, $lightness: 50%);
+$tertiary_color: scale_color($primary_color, $lightness: -50%);
+$click_color: scale-color($primary_color, $lightness: -85%);
+
+$confirm_color: green;
+$cancel_color: red;
+
+
+#content {
+  background: $secondary_color;
+
+  text-align: center;
+}
+
+#team_table {
+  display: inline-block;
+  position: relative;
+  border-collapse: collapse;
+  background: $primary_color;
+  table-layout: fixed;
+
+  #players_table_subheader_row {
+    font-size: 8pt;
+
+  }
+
+  th {
+
+    border: blue 1px solid;
+    padding: 5px 4px;
+  }
+
+  td {
+    font-size: 14pt;
+    font-family: courier new;
+    padding: 5px;
+
+  }
+
+  .data_cell {
+    //border: #d8f5ff 1px solid;
+    border: #8ce1ff 1px solid;
+  }
+
+  td, th {
+    text-align: center;
+  }
+}
