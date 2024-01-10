@@ -66,6 +66,9 @@
     --color-projmgr-background: hsl(224, 63%, 68%);    
     --color-projmgr-foreground: hsl(224, 63%, 18%);
 
+    --color-canaille-background: hsl(129, 100%, 79%);    
+    --color-canaille-foreground: hsl(1, 80%, 27%);
+
     --color-stop: 75%;
 }
 
@@ -107,42 +110,47 @@
     background: linear-gradient(var(--color-primary-black) var(--color-stop), var(--color-pattitude-background));
 }
 
-.slide--pattitude {
+.slide--pattitude, .slide--pattitude a {
     background: linear-gradient(var(--color-pattitude-background) var(--color-stop), var(--color-fantasea-background));
     color: var(--color-pattitude-foreground);
 }
 
-.slide--fantasea {
+.slide--fantasea, .slide--fantasea a {
     background: linear-gradient(var(--color-fantasea-background) var(--color-stop), var(--color-custard-commercial-background));
     color: var(--color-fantasea-foreground);
 }
 
-.slide--custard-commercial {
+.slide--custard-commercial, .slide--custard-commercial a {
     background: linear-gradient(var(--color-custard-commercial-background) var(--color-stop), var(--color-custard-energy-background));
     color: var(--color-custard-commercial-foreground);
 }
 
-.slide--custard-energy {
+.slide--custard-energy, .slide--custard-energy a {
     background: linear-gradient(var(--color-custard-energy-background) var(--color-stop), var(--color-custard-wp-background));
     color: var(--color-custard-energy-foreground);
 }
 
-.slide--custard-wp {
+.slide--custard-wp, .slide--custard-wp a {
     background: linear-gradient(var(--color-custard-wp-background) var(--color-stop), var(--color-miredo-background));
     color: var(--color-custard-wp-foreground);
 }
 
-.slide--miredo {
+.slide--miredo, .slide--miredo a {
     background: linear-gradient(var(--color-miredo-background) var(--color-stop), var(--color-lang-background));
     color: var(--color-miredo-foreground);
 }
 
-.slide--lang {
+.slide--lang, .slide--lang a {
     background: linear-gradient(var(--color-lang-background) var(--color-stop), var(--color-projmgr-background));
     color: var(--color-lang-foreground);
 }
 
-.slide--projmgr {
-    background: linear-gradient(var(--color-projmgr-background) var(--color-stop), var(--color-primary-black));
+.slide--projmgr, .slide--projmgr a {
+    background: linear-gradient(var(--color-projmgr-background) var(--color-stop), var(--color-canaille-background));
     color: var(--color-projmgr-foreground);
+}
+
+.slide--canaille, .slide--canaille a {
+    background: linear-gradient(var(--color-canaille-background) var(--color-stop), var(--color-primary-black));
+    color: var(--color-canaille-foreground);
 }
