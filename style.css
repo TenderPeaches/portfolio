@@ -72,9 +72,8 @@
     --color-stop: 75%;
 }
 
-/* style elements */
+/* global style elements */
 body {
-
     color: var(--color-white);
     background: var(--color-primary-black);
     font-family: 'Consolas', 'Courier New', Courier, monospace;
@@ -85,6 +84,7 @@ a {
 }
 
 /* layout elements for mobile screens */ 
+/*
 body {
     display: flex;
     flex-direction: column;
@@ -102,7 +102,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+}*/
 
 
 /* layout elements, for larger screens */
@@ -113,6 +113,31 @@ body {
         margin: 0;
         font-size: 1.5em;
     }
+
+    .slideshow-container {
+        background: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .slideshow {
+        position: relative;
+        width: 100%;
+        margin: 2rem;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    .slides {
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
     .slide {
         display: grid;
         padding: 2% 10% 8%;
@@ -122,6 +147,13 @@ body {
 
         justify-content: center;
         align-items: center;
+        width: 100%;
+        margin-right: 0px;
+        box-sizing: border-box;
+        background: white;
+        transform-origin: center;
+        transform: scale(1);
+        scroll-snap-align: center;
     }
 
     .slide .name {
@@ -130,50 +162,77 @@ body {
 }
 
 .slide--first {
-    background: linear-gradient(var(--color-primary-black) var(--color-stop), var(--color-pattitude-background));
+    background: linear-gradient(90deg, var(--color-primary-black) var(--color-stop), var(--color-pattitude-background));
+}
+
+.slide--pattitude {
+    background: linear-gradient(90deg, var(--color-pattitude-background) var(--color-stop), var(--color-fantasea-background));
 }
 
 .slide--pattitude, .slide--pattitude a {
-    background: linear-gradient(var(--color-pattitude-background) var(--color-stop), var(--color-fantasea-background));
     color: var(--color-pattitude-foreground);
 }
 
+.slide--fantasea {
+    background: linear-gradient(90deg, var(--color-fantasea-background) var(--color-stop), var(--color-custard-commercial-background));
+}
+
 .slide--fantasea, .slide--fantasea a {
-    background: linear-gradient(var(--color-fantasea-background) var(--color-stop), var(--color-custard-commercial-background));
     color: var(--color-fantasea-foreground);
 }
 
+.slide--custard-commercial {
+    background: linear-gradient(90deg, var(--color-custard-commercial-background) var(--color-stop), var(--color-custard-energy-background));
+}
+
 .slide--custard-commercial, .slide--custard-commercial a {
-    background: linear-gradient(var(--color-custard-commercial-background) var(--color-stop), var(--color-custard-energy-background));
     color: var(--color-custard-commercial-foreground);
 }
 
+.slide--custard-energy {
+    background: linear-gradient(90deg, var(--color-custard-energy-background) var(--color-stop), var(--color-custard-wp-background));
+}
+
 .slide--custard-energy, .slide--custard-energy a {
-    background: linear-gradient(var(--color-custard-energy-background) var(--color-stop), var(--color-custard-wp-background));
     color: var(--color-custard-energy-foreground);
 }
 
+.slide--custard-wp {
+    background: linear-gradient(90deg, var(--color-custard-wp-background) var(--color-stop), var(--color-miredo-background));
+}
+
 .slide--custard-wp, .slide--custard-wp a {
-    background: linear-gradient(var(--color-custard-wp-background) var(--color-stop), var(--color-miredo-background));
     color: var(--color-custard-wp-foreground);
 }
 
+.slide--miredo {
+    background: linear-gradient(90deg, var(--color-miredo-background) var(--color-stop), var(--color-lang-background));
+}
+
 .slide--miredo, .slide--miredo a {
-    background: linear-gradient(var(--color-miredo-background) var(--color-stop), var(--color-lang-background));
     color: var(--color-miredo-foreground);
 }
 
+.slide--lang {
+    background: linear-gradient(90deg, var(--color-lang-background) var(--color-stop), var(--color-projmgr-background));
+}
+
 .slide--lang, .slide--lang a {
-    background: linear-gradient(var(--color-lang-background) var(--color-stop), var(--color-projmgr-background));
     color: var(--color-lang-foreground);
 }
 
+.slide--projmgr {
+    background: linear-gradient(90deg, var(--color-projmgr-background) var(--color-stop), var(--color-canaille-background));
+}
+
 .slide--projmgr, .slide--projmgr a {
-    background: linear-gradient(var(--color-projmgr-background) var(--color-stop), var(--color-canaille-background));
     color: var(--color-projmgr-foreground);
 }
 
+.slide--canaille {
+    background: linear-gradient(90deg, var(--color-canaille-background) var(--color-stop), var(--color-primary-black));
+}
+
 .slide--canaille, .slide--canaille a {
-    background: linear-gradient(var(--color-canaille-background) var(--color-stop), var(--color-primary-black));
     color: var(--color-canaille-foreground);
 }
