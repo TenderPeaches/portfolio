@@ -115,19 +115,21 @@ body {
     }
 
     .slideshow-container {
-        background: red;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: 100vh;
+        background: black;
     }
 
     .slideshow {
         position: relative;
-        width: 100%;
         margin: 2rem;
         border-radius: 2rem;
         text-align: center;
+        width: 100%;
+        max-width: 100vw;
+        height: 90%;
     }
 
     .slides {
@@ -136,101 +138,90 @@ body {
         overflow-x: scroll;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
+        height: 100%;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    }
+    
+    .slides::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
     }
 
     .slide {
-        display: grid;
-        padding: 2% 10% 8%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: 50px;
-
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
         width: 100%;
-        margin-right: 0px;
+        margin: 0;
+        padding: 5% 15%;
         box-sizing: border-box;
-        background: white;
-        transform-origin: center;
+        background: black;
+        transform-origin: center center;
         transform: scale(1);
         scroll-snap-align: center;
     }
 
-    .slide .name {
-        text-align: right;
+    .slide ul {
+        text-align: left;
     }
-}
 
-.slide--first {
-    background: linear-gradient(90deg, var(--color-primary-black) var(--color-stop), var(--color-pattitude-background));
-}
+    .slide a.slide__previous, .slide a.slide__next {
+        position: absolute;
+        top: 48%;
+        width: 2rem;
+        height: 2rem;
+        border: solid white;
+        border-width: 0 4px 4px 0;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
 
-.slide--pattitude {
-    background: linear-gradient(90deg, var(--color-pattitude-background) var(--color-stop), var(--color-fantasea-background));
+    a.slide__previous {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        left: 5%;
+    }
+
+    a.slide__next {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        right: 5%;
+    }
 }
 
 .slide--pattitude, .slide--pattitude a {
     color: var(--color-pattitude-foreground);
 }
 
-.slide--fantasea {
-    background: linear-gradient(90deg, var(--color-fantasea-background) var(--color-stop), var(--color-custard-commercial-background));
-}
-
 .slide--fantasea, .slide--fantasea a {
     color: var(--color-fantasea-foreground);
-}
-
-.slide--custard-commercial {
-    background: linear-gradient(90deg, var(--color-custard-commercial-background) var(--color-stop), var(--color-custard-energy-background));
 }
 
 .slide--custard-commercial, .slide--custard-commercial a {
     color: var(--color-custard-commercial-foreground);
 }
 
-.slide--custard-energy {
-    background: linear-gradient(90deg, var(--color-custard-energy-background) var(--color-stop), var(--color-custard-wp-background));
-}
-
 .slide--custard-energy, .slide--custard-energy a {
     color: var(--color-custard-energy-foreground);
-}
-
-.slide--custard-wp {
-    background: linear-gradient(90deg, var(--color-custard-wp-background) var(--color-stop), var(--color-miredo-background));
 }
 
 .slide--custard-wp, .slide--custard-wp a {
     color: var(--color-custard-wp-foreground);
 }
 
-.slide--miredo {
-    background: linear-gradient(90deg, var(--color-miredo-background) var(--color-stop), var(--color-lang-background));
-}
-
 .slide--miredo, .slide--miredo a {
     color: var(--color-miredo-foreground);
-}
-
-.slide--lang {
-    background: linear-gradient(90deg, var(--color-lang-background) var(--color-stop), var(--color-projmgr-background));
 }
 
 .slide--lang, .slide--lang a {
     color: var(--color-lang-foreground);
 }
 
-.slide--projmgr {
-    background: linear-gradient(90deg, var(--color-projmgr-background) var(--color-stop), var(--color-canaille-background));
-}
-
 .slide--projmgr, .slide--projmgr a {
     color: var(--color-projmgr-foreground);
-}
-
-.slide--canaille {
-    background: linear-gradient(90deg, var(--color-canaille-background) var(--color-stop), var(--color-primary-black));
 }
 
 .slide--canaille, .slide--canaille a {
