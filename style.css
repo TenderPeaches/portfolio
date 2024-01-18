@@ -1,4 +1,8 @@
 :root {
+
+    /* theme layout */
+    --nav-blur: 0.25rem;
+    --transition-duration: 0.3s;
     
     /* primary color */
     /** used for default backgrounds */
@@ -129,28 +133,34 @@ a {
     gap: 2rem;
 }
 
-.slideshow__nav a {
-    display: inline-block;
+.slideshow__nav a,
+.slideshow__nav a::after {
     height: 1rem;
     width: 1rem;
+
+}
+
+.slideshow__nav a {
+    display: inline-block;
     border-radius: 50%;
-    box-shadow: 0 0 0.25rem 0.25rem var(--color-background);
+    box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-background);
+    transition: all var(--transition-duration) ease-in-out;
 }
 
-.slideshow__nav a:hover {
-    box-shadow: 0 0 0.25rem 0.25rem var(--color-nav);
+.slideshow__nav a::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    margin-left: -0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-nav);
+    transition: opacity var(--transition-duration) ease-in-out;
 }
 
-.slideshow__nav a:active {
-    box-shadow: 0 0 0.25rem 0.125rem var(--color-nav);
+.slideshow__nav a:hover::after {
+    opacity: 1;
 }
-
-.slidehow__nav a,
-.slideshow__nav a:hover,
-.slideshow__nav a:active {
-    transition: box-shadow 0.1s ease-in-out;
-}
-
 
 /* layout elements, for larger screens */
 @media (min-width: 500px) and (orientation: landscape) {
@@ -250,12 +260,20 @@ a {
     background-color: var(--color-title-nav);
 }
 
+.slideshow__nav .nav--title:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-title-nav); */
+}
+
 .slide--pattitude, .slide--pattitude a {
     color: var(--color-pattitude-foreground);
 }
 
 .nav--pattitude {
     background-color: var(--color-pattitude-nav);
+}
+
+.slideshow__nav .nav--pattitude:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-pattitude-nav); */
 }
 
 .slide--fantasea, .slide--fantasea a {
@@ -266,12 +284,20 @@ a {
     background-color: var(--color-fantasea-nav);
 }
 
+.slideshow__nav .nav--fantasea:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-fantasea-nav); */
+}
+
 .slide--custard-commercial, .slide--custard-commercial a {
     color: var(--color-custard-commercial-foreground);
 }
 
 .nav--custard-commercial {
     background-color: var(--color-custard-commercial-nav);
+}
+
+.slideshow__nav .nav--custard-commercial:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-custard-commercial-nav); */
 }
 
 .slide--custard-energy, .slide--custard-energy a {
@@ -282,12 +308,20 @@ a {
     background-color: var(--color-custard-energy-nav);
 }
 
+.slideshow__nav .nav--custard-energy:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-custard-energy-nav); */
+}
+
 .slide--custard-wp, .slide--custard-wp a {
     color: var(--color-custard-wp-foreground);
 }
 
 .nav--custard-wp {
     background-color: var(--color-custard-wp-nav);
+}
+
+.slideshow__nav .nav--custard-wp:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-custard-wp-nav); */
 }
 
 .slide--miredo, .slide--miredo a {
@@ -298,12 +332,20 @@ a {
     background-color: var(--color-miredo-nav);
 }
 
+.slideshow__nav .nav--miredo:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-miredo-nav); */
+}
+
 .slide--lang, .slide--lang a {
     color: var(--color-lang-foreground);
 }
 
 .nav--lang {
     background-color: var(--color-lang-nav);
+}
+
+.slideshow__nav .nav--lang:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-lang-nav); */
 }
 
 .slide--projmgr, .slide--projmgr a {
@@ -314,10 +356,18 @@ a {
     background-color: var(--color-projmgr-nav);
 }
 
+.slideshow__nav .nav--projmgr:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-projmgr-nav); */
+}
+
 .slide--canaille, .slide--canaille a {
     color: var(--color-canaille-foreground);
 }
 
 .nav--canaille {
     background-color: var(--color-canaille-nav);
+}
+
+.slideshow__nav .nav--canaille:hover::after {
+    /* box-shadow: 0 0 var(--nav-blur) var(--nav-blur) var(--color-canaille-nav); */
 }
