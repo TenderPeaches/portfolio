@@ -42,40 +42,58 @@
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
 
+    /* theme colors */
+    --color-nav: var(--color-white);
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+
+    --color-title-background: black;
+    --color-title-foreground: white;
+    --color-title-nav: var(--color-white);
+
     --color-pattitude-background: hsl(118, 33%, 35%);
     --color-pattitude-foreground: hsl(118, 33%, 75%);
+    --color-pattitude-nav: hsl(118, 33%, 35%);
 
     --color-fantasea-background: hsl(195, 100%, 45%);
     --color-fantasea-foreground: hsl(195, 100%, 85%);
+    --color-fantasea-nav: hsl(195, 100%, 85%);
 
     --color-custard-commercial-background: hsl(41, 100%, 40%);
     --color-custard-commercial-foreground: hsl(41, 100%, 85%);
+    --color-custard-commercial-nav: hsl(41, 100%, 85%);
 
     --color-custard-energy-background: hsl(30, 71%, 80%);
     --color-custard-energy-foreground: hsl(30, 71%, 25%);
+    --color-custard-energy-nav: hsl(30, 71%, 25%);
 
     --color-custard-wp-background: hsl(238, 45%, 11%);
     --color-custard-wp-foreground: hsl(36, 97%, 61%);
+    --color-custard-wp-nav: hsl(36, 97%, 61%);
 
     --color-lang-background: hsl(243, 100%, 50%);
     --color-lang-foreground: hsl(243, 100%, 91%);
+    --color-lang-nav: hsl(243, 100%, 91%);
 
     --color-miredo-background: hsl(104, 72%, 23%);
     --color-miredo-foreground: hsl(104, 72%, 58%);
+    --color-miredo-nav: hsl(104, 72%, 58%);
 
     --color-projmgr-background: hsl(224, 63%, 68%);    
     --color-projmgr-foreground: hsl(224, 63%, 18%);
+    --color-projmgr-nav: hsl(224, 63%, 18%);
 
     --color-canaille-background: hsl(129, 100%, 79%);    
     --color-canaille-foreground: hsl(1, 80%, 27%);
+    --color-canaille-nav: hsl(1, 80%, 27%);
 
     --color-stop: 75%;
 }
 
 /* global style elements */
 body {
-    color: var(--color-white);
-    background: var(--color-primary-black);
+    color: var(--color-text);
+    background: var(--color-background);
     font-family: 'Consolas', 'Courier New', Courier, monospace;
 }
 
@@ -84,25 +102,54 @@ a {
 }
 
 /* layout elements for mobile screens */ 
-/*
-body {
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
+
+.slide div, .slide .link {
+    margin-bottom: 1rem;    
 }
 
-.slide {
-    display: flex;
-    flex-direction: column;
-    padding: 2.5% 2.5% 17.5%;
+.slide ul {
+    margin: 0rem;
 }
 
-.slide--first {
+.slideshow-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-}*/
+    justify-content: center;
+    height: 90vh;
+}
+
+.slideshow__nav {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    margin-bottom: min(10%, 4rem);
+    height: 10vh;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.slideshow__nav a {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0.25rem 0.25rem var(--color-background);
+}
+
+.slideshow__nav a:hover {
+    box-shadow: 0 0 0.25rem 0.25rem var(--color-nav);
+}
+
+.slideshow__nav a:active {
+    box-shadow: 0 0 0.25rem 0.125rem var(--color-nav);
+}
+
+.slidehow__nav a,
+.slideshow__nav a:hover,
+.slideshow__nav a:active {
+    transition: box-shadow 0.1s ease-in-out;
+}
 
 
 /* layout elements, for larger screens */
@@ -112,14 +159,6 @@ body {
         padding: 0;
         margin: 0;
         font-size: 1.5em;
-    }
-
-    .slideshow-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background: black;
     }
 
     .slideshow {
@@ -169,61 +208,116 @@ body {
     }
 
     .slide a.slide__previous, .slide a.slide__next {
+        background: none;
+        border: solid var(--color-nav);
+        border-width: 0 4px 4px 0;
+    }
+
+    .slide a.slide__previous, .slide a.slide__next,
+    .slideshow::before, .slideshow::after {
         position: absolute;
         top: 48%;
         width: 2rem;
         height: 2rem;
-        border: solid white;
-        border-width: 0 4px 4px 0;
         padding: 0.5rem;
         box-sizing: border-box;
     }
 
-    a.slide__previous {
+    a.slide__previous,
+    .slideshow::before {
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
         left: 5%;
     }
 
-    a.slide__next {
+    a.slide__next,
+    .slideshow::after {
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         right: 5%;
     }
+    
+    .slideshow::before,
+    .slideshow::after {
+        content: '';
+        z-index: 1;
+        background: none;
+        pointer-events: none;
+    }
+}
+
+.nav--title {
+    background-color: var(--color-title-nav);
 }
 
 .slide--pattitude, .slide--pattitude a {
     color: var(--color-pattitude-foreground);
 }
 
+.nav--pattitude {
+    background-color: var(--color-pattitude-nav);
+}
+
 .slide--fantasea, .slide--fantasea a {
     color: var(--color-fantasea-foreground);
+}
+
+.nav--fantasea {
+    background-color: var(--color-fantasea-nav);
 }
 
 .slide--custard-commercial, .slide--custard-commercial a {
     color: var(--color-custard-commercial-foreground);
 }
 
+.nav--custard-commercial {
+    background-color: var(--color-custard-commercial-nav);
+}
+
 .slide--custard-energy, .slide--custard-energy a {
     color: var(--color-custard-energy-foreground);
+}
+
+.nav--custard-energy {
+    background-color: var(--color-custard-energy-nav);
 }
 
 .slide--custard-wp, .slide--custard-wp a {
     color: var(--color-custard-wp-foreground);
 }
 
+.nav--custard-wp {
+    background-color: var(--color-custard-wp-nav);
+}
+
 .slide--miredo, .slide--miredo a {
     color: var(--color-miredo-foreground);
+}
+
+.nav--miredo {
+    background-color: var(--color-miredo-nav);
 }
 
 .slide--lang, .slide--lang a {
     color: var(--color-lang-foreground);
 }
 
+.nav--lang {
+    background-color: var(--color-lang-nav);
+}
+
 .slide--projmgr, .slide--projmgr a {
     color: var(--color-projmgr-foreground);
 }
 
+.nav--projmgr {
+    background-color: var(--color-projmgr-nav);
+}
+
 .slide--canaille, .slide--canaille a {
     color: var(--color-canaille-foreground);
+}
+
+.nav--canaille {
+    background-color: var(--color-canaille-nav);
 }
