@@ -1,0 +1,27 @@
+.blurb,
+.rundown {
+	padding: 0.25rem 10%;
+	background: hsla(var(--contrast-hue), var(--contrast-saturation), calc(1.65 * var(--contrast-light)), 85%);
+}
+
+.rundown {
+	
+}
+
+.rundown__header {
+	margin: 1rem 0 0;	
+}
+
+.rundown__header-emphasis {
+	font-family: 'content-bold';
+}
+
+.rundown__para {
+
+}
+
+@media (min-width: 480px) {
+	.rundown {
+		margin: 1rem 0;
+	}
+}

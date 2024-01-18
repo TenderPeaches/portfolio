@@ -1,0 +1,5 @@
+
+.blurb {
+	padding: 0.25rem 10%;
+	background: hsla(var(--contrast-hue), var(--contrast-saturation), calc(1.65 * var(--contrast-light)), 85%);
+}
