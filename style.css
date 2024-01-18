@@ -246,6 +246,18 @@ a.slide__next,
     pointer-events: none;
 }
 
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;   
+    gap: 1rem;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
 /* layout elements, for larger screens */
 @media (min-width: 500px) and (orientation: landscape) {
     
@@ -261,7 +273,7 @@ a.slide__next,
     background-color: var(--color-title-nav);
 }
 
-.slide--pattitude, .link--pattitude a {
+.link--pattitude a, #slide--pattitude fieldset legend {
     color: var(--color-pattitude-foreground);
 }
 
@@ -269,7 +281,7 @@ a.slide__next,
     background-color: var(--color-pattitude-nav);
 }
 
-.slide--fantasea, .link--fantasea a {
+.link--fantasea a, #slide--fantasea fieldset legend {
     color: var(--color-fantasea-foreground);
 }
 
@@ -277,7 +289,7 @@ a.slide__next,
     background-color: var(--color-fantasea-nav);
 }
 
-.slide--custard-commercial, .link--custard-commercial a {
+.link--custard-commercial a, #slide--custard-commercial fieldset legend {
     color: var(--color-custard-commercial-foreground);
 }
 
@@ -285,7 +297,7 @@ a.slide__next,
     background-color: var(--color-custard-commercial-nav);
 }
 
-.slide--custard-energy, .link--custard-energy a {
+.link--custard-energy a, #slide--custard-energy fieldset legend {
     color: var(--color-custard-energy-foreground);
 }
 
@@ -293,7 +305,7 @@ a.slide__next,
     background-color: var(--color-custard-energy-nav);
 }
 
-.slide--custard-wp, .link--custard-wp a {
+.link--custard-wp a, #slide--custard-wp fieldset legend {
     color: var(--color-custard-wp-foreground);
 }
 
@@ -301,7 +313,7 @@ a.slide__next,
     background-color: var(--color-custard-wp-nav);
 }
 
-.slide--miredo, .link--miredo a {
+.link--miredo a, #slide--miredo fieldset legend {
     color: var(--color-miredo-foreground);
 }
 
@@ -309,7 +321,7 @@ a.slide__next,
     background-color: var(--color-miredo-nav);
 }
 
-.slide--lang, .link--lang a {
+.link--lang a, #slide--lang fieldset legend {
     color: var(--color-lang-foreground);
 }
 
@@ -317,7 +329,7 @@ a.slide__next,
     background-color: var(--color-lang-nav);
 }
 
-.slide--projmgr, .link--projmgr a {
+.link--projmgr a, #slide--projmgr fieldset legend {
     color: var(--color-projmgr-foreground);
 }
 
@@ -325,7 +337,7 @@ a.slide__next,
     background-color: var(--color-projmgr-nav);
 }
 
-.slide--canaille, .link--canaille a {
+.link--canaille a, #slide--canaille fieldset legend {
     color: var(--color-canaille-foreground);
 }
 
